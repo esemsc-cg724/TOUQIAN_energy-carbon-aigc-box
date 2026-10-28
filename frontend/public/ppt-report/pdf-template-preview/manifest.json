@@ -1,0 +1,166 @@
+{
+  "version": 2,
+  "trace": "TRACE[PPT-TEMPLATE-NEW-001]",
+  "sourceType": "pdf-render",
+  "source": "风控报告新模板-修订更新.pdf",
+  "slideSize": {
+    "width": 1920,
+    "height": 1080
+  },
+  "slides": [
+    {
+      "slideNo": 1,
+      "id": "slide01",
+      "name": "封面",
+      "image": "page-01.png"
+    },
+    {
+      "slideNo": 2,
+      "id": "slide02",
+      "name": "目录",
+      "image": "page-02.png"
+    },
+    {
+      "slideNo": 3,
+      "id": "slide03",
+      "name": "用电方介绍",
+      "image": "page-03.png"
+    },
+    {
+      "slideNo": 4,
+      "id": "slide04",
+      "name": "企业资信与政策风险",
+      "image": "page-04.png"
+    },
+    {
+      "slideNo": 5,
+      "id": "slide05",
+      "name": "现场踏勘情况",
+      "image": "page-05.png"
+    },
+    {
+      "slideNo": 6,
+      "id": "slide06",
+      "name": "财务分析与回款风险",
+      "image": "page-06.png"
+    },
+    {
+      "slideNo": 7,
+      "id": "slide07",
+      "name": "承债式收购资信调查",
+      "image": "page-07.png"
+    },
+    {
+      "slideNo": 8,
+      "id": "slide08",
+      "name": "合规性文件概览",
+      "image": "page-08.png"
+    },
+    {
+      "slideNo": 9,
+      "id": "slide09",
+      "name": "商务条件与收益风险",
+      "image": "page-09.png"
+    },
+    {
+      "slideNo": 10,
+      "id": "slide10",
+      "name": "EMC商务条款",
+      "image": "page-10.png"
+    },
+    {
+      "slideNo": 11,
+      "id": "slide11",
+      "name": "电价-单瓦投资成本敏感性",
+      "image": "page-11.png"
+    },
+    {
+      "slideNo": 12,
+      "id": "slide12",
+      "name": "前序项目回顾",
+      "image": "page-12.png"
+    },
+    {
+      "slideNo": 13,
+      "id": "slide13",
+      "name": "风险一览表及评审意见",
+      "image": "page-13.png"
+    },
+    {
+      "slideNo": 14,
+      "id": "slide14",
+      "name": "立项会变更事宜",
+      "image": "page-14.png"
+    },
+    {
+      "slideNo": 15,
+      "id": "slide15",
+      "name": "项目优势分析",
+      "image": "page-15.png"
+    },
+    {
+      "slideNo": 16,
+      "id": "slide16",
+      "name": "项目风险及措施",
+      "image": "page-16.png"
+    },
+    {
+      "slideNo": 17,
+      "id": "slide17",
+      "name": "项目法务风险",
+      "image": "page-17.png"
+    },
+    {
+      "slideNo": 18,
+      "id": "slide18",
+      "name": "部门评审意见",
+      "image": "page-18.png"
+    },
+    {
+      "slideNo": 19,
+      "id": "slide19",
+      "name": "附录目录",
+      "image": "page-19.png"
+    },
+    {
+      "slideNo": 20,
+      "id": "slide20",
+      "name": "项目基本概况",
+      "image": "page-20.png"
+    },
+    {
+      "slideNo": 21,
+      "id": "slide21",
+      "name": "项目打分自评表1",
+      "image": "page-21.png"
+    },
+    {
+      "slideNo": 22,
+      "id": "slide22",
+      "name": "项目打分自评表2",
+      "image": "page-22.png"
+    },
+    {
+      "slideNo": 23,
+      "id": "slide23",
+      "name": "发电量及收益预测",
+      "image": "page-23.png"
+    },
+    {
+      "slideNo": 24,
+      "id": "slide24",
+      "name": "用电企业资信信息",
+      "image": "page-24.png"
+    },
+    {
+      "slideNo": 25,
+      "id": "slide25",
+      "name": "结束页",
+      "image": "page-25.png"
+    }
+  ],
+  "reviewNotes": [
+    "PDF 模板只提供静态预览底图；字段编辑仍以左侧字段 JSON 为准。",
+    "最终 PPTX 精确写入需要拿到同版 PPTX 源模板。"
+  ]
+}

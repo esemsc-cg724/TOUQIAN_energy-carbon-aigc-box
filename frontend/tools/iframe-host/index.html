@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPT Report iframe 本地测试 Host</title>
+    <style>
+      /*
+       * 这个文件模拟“别人家的大模型窗口”。
+       * 本地测试时用 5180 端口打开它，再把 5173 端口的 PPT Report embed 页面放进 iframe。
+       */
+      :root {
+        color-scheme: light;
+        --bg: #f4f6f8;
+        --ink: #18202b;
+        --line: #d8dee5;
+        --muted: #687584;
+        --primary: #246a73;
+        --surface: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        background: var(--bg);
+        font: 14px/1.5 "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+      }
+
+      .host-shell {
+        display: grid;
+        grid-template-columns: 320px minmax(0, 1fr);
+        gap: 16px;
+        min-height: 100vh;
+        padding: 16px;
+      }
+
+      .host-panel,
+      .iframe-panel {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--surface);
+      }
+
+      .host-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+      }
+
+      .host-panel h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      .host-panel p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .message-log {
+        display: grid;
+        gap: 8px;
+        overflow: auto;
+        min-height: 240px;
+        max-height: calc(100vh - 260px);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 10px;
+        background: #f9fafb;
+      }
+
+      .message-item {
+        border-left: 3px solid var(--primary);
+        padding: 8px 10px;
+        background: #ffffff;
+      }
+
+      .message-item strong {
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .message-item pre {
+        overflow: auto;
+        margin: 0;
+        color: var(--muted);
+        white-space: pre-wrap;
+      }
+
+      .iframe-panel {
+        overflow: hidden;
+      }
+
+      iframe {
+        display: block;
+        width: 100%;
+        height: calc(100vh - 34px);
+        border: 0;
+        background: #ffffff;
+      }
+
+      button {
+        min-height: 36px;
+        border: 1px solid var(--primary);
+        border-radius: 6px;
+        color: #ffffff;
+        background: var(--primary);
+        cursor: pointer;
+        font: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="host-shell">
+      <aside class="host-panel">
+        <h1>模拟大模型窗口</h1>
+        <p>这个页面代表客户已有系统；右侧 iframe 是我们提供的 PPT Report 嵌入页面。</p>
+        <button type="button" id="reloadFrame">重新加载 iframe</button>
+        <section>
+          <h2>iframe 消息</h2>
+          <div class="message-log" id="messageLog"></div>
+        </section>
+      </aside>
+
+      <section class="iframe-panel">
+        <iframe id="pptReportFrame" title="PPT Report iframe 本地嵌入测试"></iframe>
+      </section>
+    </main>
+
+    <script>
+      /*
+       * Host 页面只负责两件事：
+       * 1. 生成 iframe src，模拟客户系统把 session/project/token 传给我们。
+       * 2. 监听 iframe 的 postMessage，模拟客户系统把生成结果展示回大模型对话。
+       */
+      const frontendOrigin = "http://127.0.0.1:5173";
+      const hostOrigin = "http://127.0.0.1:5180";
+      const iframe = document.querySelector("#pptReportFrame");
+      const messageLog = document.querySelector("#messageLog");
+      const reloadButton = document.querySelector("#reloadFrame");
+
+      function buildIframeSrc() {
+        // parentOrigin 用于 iframe 回传消息时指定目标来源，正式接入时必须换成客户系统真实域名。
+        const params = new URLSearchParams({
+          parentOrigin: hostOrigin,
+          projectId: "ZNE-2024-SZ-028",
+          sessionId: "local-001",
+          token: "dev-token"
+        });
+
+        return `${frontendOrigin}/ppt-risk-report/embed?${params.toString()}`;
+      }
+
+      function appendMessage(title, data) {
+        // 把 iframe 发来的 READY / GENERATED / ERROR 消息直接展示出来，方便本地人工验收。
+        const item = document.createElement("article");
+        item.className = "message-item";
+        item.innerHTML = `
+          <strong>${title}</strong>
+          <pre>${JSON.stringify(data, null, 2)}</pre>
+        `;
+        messageLog.prepend(item);
+      }
+
+      window.addEventListener("message", (event) => {
+        // 本地测试中只接受 5173 前端发来的消息，防止其他窗口误发消息污染日志。
+        if (event.origin !== frontendOrigin) {
+          return;
+        }
+
+        appendMessage(event.data?.type || "UNKNOWN_MESSAGE", event.data);
+      });
+
+      reloadButton.addEventListener("click", () => {
+        // 重新加载 iframe 可以重复验证 PPT_REPORT_READY 是否正常回传。
+        iframe.src = buildIframeSrc();
+      });
+
+      iframe.src = buildIframeSrc();
+    </script>
+  </body>
+</html>

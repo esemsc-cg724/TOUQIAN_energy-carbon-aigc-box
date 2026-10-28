@@ -1,0 +1,51 @@
+.file-parser-supplement {
+  width: 100%;
+}
+
+.file-parser-supplement > .ant-card-body {
+  max-height: 320px;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.file-parser-supplement.is-expanded > .ant-card-body {
+  max-height: 75vh;
+}
+
+.file-parser-supplement .ant-tabs-nav {
+  margin-bottom: 8px;
+}
+
+.file-parser-supplement .ant-upload-drag .ant-upload-btn {
+  padding: 8px;
+}
+
+.file-parser-supplement .ant-upload-drag p {
+  margin: 4px 0;
+}
+
+.initiation-asset-panel {
+  margin-block: 16px;
+}
+
+.initiation-asset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 16px;
+}
+
+.initiation-asset-grid figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.initiation-asset-grid img {
+  height: 190px;
+  object-fit: contain;
+}
+
+.initiation-asset-grid figcaption {
+  margin-top: 8px;
+  text-align: center;
+  overflow-wrap: anywhere;
+}

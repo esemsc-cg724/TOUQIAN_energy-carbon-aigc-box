@@ -1,0 +1,947 @@
+{
+  "version": 1,
+  "trace": "TRACE[PPT-TEMPLATE-NEW-002]",
+  "source": "新PPT模版字段提取表(3).xlsx",
+  "fields": [
+    {
+      "row": 6,
+      "section": "经营能力分析-用电方介绍",
+      "group": "",
+      "fieldKey": "ydqymc",
+      "fieldType": "文本",
+      "label": "用电企业名称",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 7,
+      "section": "经营能力分析-用电方介绍",
+      "group": "",
+      "fieldKey": "cxjcn",
+      "fieldType": "文本",
+      "label": "产线及产能",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 8,
+      "section": "经营能力分析-用电方介绍",
+      "group": "",
+      "fieldKey": "zykh",
+      "fieldType": "文本",
+      "label": "主要客户",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 9,
+      "section": "经营能力分析-用电方介绍",
+      "group": "",
+      "fieldKey": "gzms",
+      "fieldType": "文本",
+      "label": "工作模式",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 11,
+      "section": "资信风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "股权质押情况",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 12,
+      "section": "资信风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "被执行记录",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 13,
+      "section": "资信风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "动产抵押情况",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 14,
+      "section": "资信风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "无失信被执行人",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 15,
+      "section": "资信风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "存续",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 16,
+      "section": "资信风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "无经营异常",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 17,
+      "section": "资信风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "无严重违法失信",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 18,
+      "section": "政策合规性风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "结论：是否存在政策可能对收益率造成的影响",
+      "method": "填写方式（人工填写）",
+      "note": ""
+    },
+    {
+      "row": 21,
+      "section": "现场踏勘情况",
+      "group": "",
+      "fieldKey": "wdcqf",
+      "fieldType": "文本",
+      "label": "屋顶产权方",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 22,
+      "section": "现场踏勘情况",
+      "group": "",
+      "fieldKey": "cxsynx",
+      "fieldType": "浮点数",
+      "label": "产权剩余年限（年）",
+      "method": "人工填写",
+      "note": "人工填写"
+    },
+    {
+      "row": 23,
+      "section": "现场踏勘情况",
+      "group": "",
+      "fieldKey": "wdlx",
+      "fieldType": "文本",
+      "label": "屋顶类型",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 25,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "zzc",
+      "fieldType": "浮点数",
+      "label": "总资产（万元）",
+      "method": "优先企查查，没有的话人工填写",
+      "note": ""
+    },
+    {
+      "row": 26,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "jzc",
+      "fieldType": "浮点数",
+      "label": "净资产（万元）",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 27,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "yysr",
+      "fieldType": "浮点数",
+      "label": "营业收入（万元）",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 28,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "jlr",
+      "fieldType": "浮点数",
+      "label": "净利润（万元）",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 29,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "hbzj",
+      "fieldType": "浮点数",
+      "label": "货币资金（万元）",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 30,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "jll",
+      "fieldType": "浮点数",
+      "label": "净利率",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 31,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "roe",
+      "fieldType": "浮点数",
+      "label": "ROE",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 32,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "ldbl",
+      "fieldType": "浮点数",
+      "label": "流动比率",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 33,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "sdbl",
+      "fieldType": "浮点数",
+      "label": "速动比率",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 34,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "fzl",
+      "fieldType": "浮点数",
+      "label": "负债率",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 35,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "1.盈利能力分析",
+      "method": "填写方式 （优先AI总结，同时保留人工修改）",
+      "note": ""
+    },
+    {
+      "row": 36,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "2. 经营效率与现金流状况：",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 37,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "3. 资产负债情况：",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 38,
+      "section": "用电企业财务分析与回款风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "结论：eg.盈利回暖，但现金流偏紧、基于目前财务情况，企业回款能力正常/有风险",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 39,
+      "section": "新增承债式收购项目中项目公司及其原股东方资信调查",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "针对承债式收购的项目公司原股东：1）仅自然人股东或者原股东公司为空壳公司，需提增信措施（原股东资\n信）：如股转协议协议增加EPC方，用epc款项做担保；或者额外提供其他担保措施，如房产抵押，其他公司股权\n质押或者保函等其他担保措施；2）项目公司是否涉及诉讼；3）项目公司及母公司是否已有股权质押/冻结情况\n等",
+      "method": "填写方式：企查查优先，人工做后修改",
+      "note": ""
+    },
+    {
+      "row": 56,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz1",
+      "fieldType": "是　否",
+      "label": "项目所在地属于限制准入区域",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 57,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz2",
+      "fieldType": "是　否",
+      "label": "项目位于东北区域",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 58,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz3",
+      "fieldType": "是　否",
+      "label": "项目所在地市(公司战略核心区域外)无其他已投运项目且项目规模小于3MW",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 59,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz4",
+      "fieldType": "是　否",
+      "label": "用能企业仅提供一年财报且亏损，或提供两年及以上财报连续两年及以上亏损",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 60,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz5",
+      "fieldType": "是　否",
+      "label": "用能企业属于限制准入的行业",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 61,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz6",
+      "fieldType": "是　否",
+      "label": "用能企业无法提供加盖公童的近三年财务数据、用电数据等项目相关数据",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 62,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz7",
+      "fieldType": "是　否",
+      "label": "用能企业为产业园类型",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 63,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz8",
+      "fieldType": "是　否",
+      "label": "用能企业规模小(如民营企业目实收资本金低于1000 万元)",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 64,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz9",
+      "fieldType": "是　否",
+      "label": "项目消纳率不足 80%",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 65,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "fkxz10",
+      "fieldType": "是　否",
+      "label": "项目余电不上网",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 66,
+      "section": "商务条件与收益风险",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "结论：若收益率不达标（收益不达标业务出具解释）",
+      "method": "填写方式：人工填写",
+      "note": ""
+    },
+    {
+      "row": 70,
+      "section": "前序项目回顾（如有）",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "并网情况",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 71,
+      "section": "前序项目回顾（如有）",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "发电小时数",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 72,
+      "section": "前序项目回顾（如有）",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "回款异常情况",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 73,
+      "section": "前序项目回顾（如有）",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "运维异常",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 74,
+      "section": "前序项目回顾（如有）",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "诉讼情况",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 75,
+      "section": "前序项目回顾（如有）",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "后评价的收益率&结论",
+      "method": "OA抓取（完成后评价的项目可在OA抓取）",
+      "note": ""
+    },
+    {
+      "row": 77,
+      "section": "项目风险一览表及项目评审意见",
+      "group": "",
+      "fieldKey": "sfd",
+      "fieldType": "",
+      "label": "主要失分点",
+      "method": "AI总结",
+      "note": ""
+    },
+    {
+      "row": 78,
+      "section": "项目风险一览表及项目评审意见",
+      "group": "",
+      "fieldKey": "pfxz",
+      "fieldType": "",
+      "label": "评分细则",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 79,
+      "section": "项目风险一览表及项目评审意见",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "得分XX分",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 80,
+      "section": "项目风险一览表及项目评审意见",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "风险量表",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 82,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "容量",
+      "method": "填写方式： 立项上会优先走OA，没有的话人工填写。投决上会数据走人工",
+      "note": ""
+    },
+    {
+      "row": 83,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "消纳比例",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 84,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "用户折后电价",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 85,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "运营年限",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 86,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "屋顶租金",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 87,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "接网形式：是否余电上网",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 88,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "余电上网电价",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 89,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "公司管理费",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 90,
+      "section": "立项会变更事宜",
+      "group": "",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "全投资收益率",
+      "method": "",
+      "note": ""
+    },
+    {
+      "row": 92,
+      "section": "项目风险一览表及项目评审意见",
+      "group": "项目优势分析",
+      "fieldKey": "ysfx",
+      "fieldType": "文本",
+      "label": "项目优势分析",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 93,
+      "section": "项目风险一览表及项目评审意见",
+      "group": "风险及措施",
+      "fieldKey": "xmfx",
+      "fieldType": "文本",
+      "label": "项目风险及措施",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 94,
+      "section": "项目风险一览表及项目评审意见",
+      "group": "风险及措施",
+      "fieldKey": "xmfwfx",
+      "fieldType": "文本",
+      "label": "项目法务风险",
+      "method": "填写方式：人工填写",
+      "note": ""
+    },
+    {
+      "row": 95,
+      "section": "项目风险一览表及项目评审意见",
+      "group": "部门评审意见",
+      "fieldKey": "bmpsyj",
+      "fieldType": "文本",
+      "label": "部门评审意见",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 97,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "xmmc",
+      "fieldType": "文本",
+      "label": "项目名称",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 98,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "xmbh",
+      "fieldType": "文本",
+      "label": "项目编号",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 99,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "xmzpf",
+      "fieldType": "浮点数",
+      "label": "项目自评分",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 100,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "ywb",
+      "fieldType": "文本",
+      "label": "业务部",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 101,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "xmjl",
+      "fieldType": "文本",
+      "label": "项目经理",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 102,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "xmlx",
+      "fieldType": "文本",
+      "label": "项目类型",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 103,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "xmgm",
+      "fieldType": "浮点数",
+      "label": "项目规模（MW）",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 104,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "kffs",
+      "fieldType": "文本",
+      "label": "开发方式",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 105,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "yynx",
+      "fieldType": "浮点数",
+      "label": "运营年限（年）",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 106,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "ysztz",
+      "fieldType": "浮点数",
+      "label": "预算总投资（万元）",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 107,
+      "section": "附录",
+      "group": "项目概要",
+      "fieldKey": "qtzshIRR",
+      "fieldType": "文本",
+      "label": "全投资税后IRR",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 109,
+      "section": "附录",
+      "group": "消纳、电价、接入",
+      "fieldKey": "xnbl",
+      "fieldType": "文本",
+      "label": "消纳比例",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 110,
+      "section": "附录",
+      "group": "消纳、电价、接入",
+      "fieldKey": "tlbgdj",
+      "fieldType": "浮点数",
+      "label": "脱硫标杆电价",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 111,
+      "section": "附录",
+      "group": "消纳、电价、接入",
+      "fieldKey": "djzk",
+      "fieldType": "浮点数",
+      "label": "电价折扣",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 112,
+      "section": "附录",
+      "group": "消纳、电价、接入",
+      "fieldKey": "qyyddj",
+      "fieldType": "浮点数",
+      "label": "企业用电电价",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 113,
+      "section": "附录",
+      "group": "消纳、电价、接入",
+      "fieldKey": "jrdydj",
+      "fieldType": "浮点数",
+      "label": "接入电压等级（kV）",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 114,
+      "section": "附录",
+      "group": "消纳、电价、接入",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "度电成本",
+      "method": "填写方式：先人工填写，后续等数据接入，目前缺失",
+      "note": ""
+    },
+    {
+      "row": 115,
+      "section": "附录",
+      "group": "用电方信息",
+      "fieldKey": "ydqymc",
+      "fieldType": "文本",
+      "label": "用电企业名称",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 116,
+      "section": "附录",
+      "group": "用电方信息",
+      "fieldKey": "ydqyxz",
+      "fieldType": "文本",
+      "label": "用电企业性质",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 117,
+      "section": "附录",
+      "group": "用电方信息",
+      "fieldKey": "zczbj",
+      "fieldType": "浮点数",
+      "label": "注册资本金（万元）",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 118,
+      "section": "附录",
+      "group": "用电方信息",
+      "fieldKey": "schy",
+      "fieldType": "文本",
+      "label": "所处行业",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 119,
+      "section": "附录",
+      "group": "项目公司",
+      "fieldKey": "xmgsmc",
+      "fieldType": "文本",
+      "label": "项目公司名称",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 120,
+      "section": "附录",
+      "group": "项目公司",
+      "fieldKey": "zczbj",
+      "fieldType": "浮点数",
+      "label": "注册资本金（万元）",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 121,
+      "section": "附录",
+      "group": "项目公司",
+      "fieldKey": "frdb",
+      "fieldType": "文本",
+      "label": "法人代表",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 122,
+      "section": "附录",
+      "group": "项目公司",
+      "fieldKey": "gdmz",
+      "fieldType": "文本",
+      "label": "股东名称及持股比例",
+      "method": "企查查抓取",
+      "note": ""
+    },
+    {
+      "row": 123,
+      "section": "附录",
+      "group": "屋顶情况",
+      "fieldKey": "cxfmc",
+      "fieldType": "文本",
+      "label": "产权方名称",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 124,
+      "section": "附录",
+      "group": "屋顶情况",
+      "fieldKey": "zlmj",
+      "fieldType": "浮点数",
+      "label": "租赁面积",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 125,
+      "section": "附录",
+      "group": "屋顶情况",
+      "fieldKey": "zlje",
+      "fieldType": "浮点数",
+      "label": "租赁金额",
+      "method": "OA抓取",
+      "note": ""
+    },
+    {
+      "row": 128,
+      "section": "附录",
+      "group": "屋顶情况",
+      "fieldKey": "xmzpf",
+      "fieldType": "浮点数",
+      "label": "项目自评分",
+      "method": "人工填写",
+      "note": ""
+    },
+    {
+      "row": 130,
+      "section": "附录",
+      "group": "屋顶情况",
+      "fieldKey": "",
+      "fieldType": "",
+      "label": "资信信息图片先走爬虫，不行的话人工填写",
+      "method": "尝试爬虫，不行的话人工填写",
+      "note": ""
+    }
+  ]
+}

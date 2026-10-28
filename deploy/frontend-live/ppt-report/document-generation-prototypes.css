@@ -1,0 +1,4817 @@
+/*
+ * PPT 文档生成最小前端样式。
+ *
+ * 使用范围：
+ * - 三个方案页面的整体平台风格
+ * - 输入模板、字段编辑区、模拟 PPT 预览区
+ * - 完成度模块、智能哨兵模块、AI 总结模块
+ *
+ * 注意：
+ * - 这里的 PPT 是网页模拟预览，不是真实 PPTX 文件。
+ * - 真实 PPTX 的字体、颜色、版式由 templates/files 下的模板文件决定。
+ */
+:root {
+  color-scheme: light;
+  --bg: #f3f5f7;
+  --surface: #ffffff;
+  --surface-soft: #f6f8fa;
+  --ink: #17222b;
+  --muted: #687784;
+  --line: #d8dee5;
+  --line-strong: #b7c1ca;
+  --primary: #246a73;
+  --primary-strong: #174f57;
+  --accent: #c4892a;
+  --success: #317a51;
+  --danger: #b64b4b;
+  --sidebar: #f8fafc;
+  --shadow: 0 12px 28px rgba(23, 34, 43, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--bg);
+  font: 14px/1.5 "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+.file-link {
+  min-height: 38px;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  color: var(--ink);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+button {
+  padding: 0 14px;
+}
+
+button:hover,
+.file-link:hover {
+  border-color: var(--primary);
+}
+
+.primary {
+  border-color: var(--primary);
+  color: #ffffff;
+  background: var(--primary);
+}
+
+.primary:hover {
+  background: var(--primary-strong);
+}
+
+.ghost {
+  color: var(--primary);
+  background: #f5fbfc;
+}
+
+.file-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.file-link.is-disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--ink);
+  background: #ffffff;
+}
+
+input,
+select {
+  height: 38px;
+  padding: 0 10px;
+}
+
+textarea {
+  min-height: 84px;
+  padding: 10px;
+  resize: vertical;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  color: #33424d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--line);
+  padding: 10px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  color: #42505b;
+  background: #f4f7f8;
+  font-size: 12px;
+}
+
+.app-layout {
+  display: grid;
+  grid-template-columns: 284px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.left-rail {
+  border-right: 1px solid var(--line);
+  background: var(--sidebar);
+  padding: 22px 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  color: #ffffff;
+  background: var(--primary);
+  font-weight: 800;
+}
+
+.brand strong {
+  display: block;
+  font-size: 18px;
+}
+
+.brand span {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.rail-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.rail-button.active {
+  border-color: #cbd8e1;
+  color: var(--primary);
+  background: #eaf2f4;
+}
+
+.rail-section {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.rail-section h3 {
+  margin: 0 0 12px;
+  color: #354450;
+  font-size: 14px;
+}
+
+.history-item {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  color: #50606d;
+  background: #eef2f5;
+  font-size: 12px;
+}
+
+.main-area {
+  min-width: 0;
+  padding: 24px;
+}
+
+.topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.topline h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0;
+}
+
+.topline p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.status-chip,
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: #52616d;
+  background: #ffffff;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.pill.ok {
+  color: var(--success);
+  background: #eef8f3;
+  border-color: #b7d8c6;
+}
+
+.pill.warn {
+  color: #93631a;
+  background: #fff7e8;
+  border-color: #e6c88e;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 16px;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.panel-body {
+  padding: 16px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.project-select-card {
+  position: relative;
+  z-index: 20;
+  display: grid;
+  gap: 8px;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 12px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.26), rgba(88, 188, 255, 0.18)) border-box;
+}
+
+.project-select-title {
+  color: #566276;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.project-search-input {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #dfe6f4;
+  border-radius: 11px;
+  padding: 0 14px;
+  color: #263046;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(58, 64, 99, 0.04);
+  font-weight: 800;
+}
+
+.project-search-input:focus {
+  outline: none;
+  border-color: #a9a7ff;
+  box-shadow: 0 0 0 3px rgba(119, 116, 246, 0.08);
+}
+
+.project-search-results {
+  display: grid;
+  gap: 6px;
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid #e6ebf6;
+  border-radius: 12px;
+  padding: 6px;
+  background: #fbfcff;
+}
+
+.project-search-result {
+  width: 100%;
+  min-height: 50px;
+  display: grid;
+  gap: 3px;
+  border: 0;
+  border-radius: 9px;
+  padding: 9px 10px;
+  color: #263046;
+  background: #ffffff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.project-search-result:hover {
+  background: #f4f7ff;
+}
+
+.project-search-result.active {
+  color: #5752df;
+  background: #eff1ff;
+}
+
+.project-search-result strong,
+.project-search-result small {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-search-result strong {
+  font-size: 13px;
+}
+
+.project-search-result small,
+.project-search-empty {
+  color: #738095;
+  font-size: 11px;
+}
+
+.project-search-empty {
+  padding: 10px;
+  font-weight: 800;
+}
+
+.project-picker-select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid #dfe6f4;
+  border-radius: 11px;
+  padding: 0 40px 0 13px;
+  color: #263046;
+  background:
+    linear-gradient(45deg, transparent 50%, #7774f6 50%) calc(100% - 18px) 50% / 6px 6px no-repeat,
+    linear-gradient(135deg, #ffffff, #fbfcff);
+  box-shadow: 0 8px 18px rgba(58, 64, 99, 0.04);
+  font-weight: 800;
+  cursor: pointer;
+  appearance: none;
+}
+
+.project-picker-select:focus {
+  outline: none;
+  border-color: #a9a7ff;
+  box-shadow: 0 0 0 3px rgba(119, 116, 246, 0.08);
+}
+
+.project-sync-notice {
+  display: grid;
+  gap: 4px;
+  border: 1px solid #dfe6f4;
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: #263046;
+  background: #f8fbff;
+  font-size: 12px;
+}
+
+.project-sync-notice strong {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.project-sync-notice small {
+  color: #6d7890;
+  line-height: 1.45;
+}
+
+.project-sync-notice.loading {
+  border-color: #a9a7ff;
+  background: #f6f7ff;
+}
+
+.project-sync-notice.success {
+  border-color: #9bd4b2;
+  background: #f3fbf6;
+}
+
+.project-sync-notice.warning {
+  border-color: #e5c978;
+  background: #fffaf0;
+}
+
+.project-sync-notice.error {
+  border-color: #efb3b3;
+  background: #fff5f5;
+}
+
+.project-sync-notice.error strong,
+.project-sync-notice.error small {
+  color: #b64b4b;
+}
+
+.project-picker {
+  position: relative;
+}
+
+.project-picker.is-open {
+  z-index: 1000;
+}
+
+.project-picker-button {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-color: #dfe6f4;
+  border-radius: 11px;
+  padding: 0 13px;
+  color: #263046;
+  background: #ffffff;
+  text-align: left;
+  box-shadow: 0 8px 18px rgba(58, 64, 99, 0.04);
+}
+
+.project-picker-button span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 800;
+}
+
+.project-picker-button i {
+  color: #7774f6;
+  font-style: normal;
+  transition: transform 160ms ease;
+}
+
+.project-picker.is-open .project-picker-button {
+  border-color: #a9a7ff;
+  box-shadow: 0 0 0 3px rgba(119, 116, 246, 0.08);
+}
+
+.project-picker.is-open .project-picker-button i {
+  transform: rotate(180deg);
+}
+
+.project-picker-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  display: none;
+  gap: 4px;
+  max-height: 220px;
+  overflow: auto;
+  border: 1px solid #dfe6f4;
+  border-radius: 12px;
+  padding: 6px;
+  background: #ffffff;
+  box-shadow: 0 18px 38px rgba(30, 39, 70, 0.15);
+}
+
+.project-picker.is-open .project-picker-menu {
+  display: grid;
+}
+
+.project-picker-menu button {
+  width: 100%;
+  min-height: 54px;
+  display: grid;
+  gap: 3px;
+  border: 0;
+  border-radius: 9px;
+  padding: 9px 10px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.project-picker-menu button:hover {
+  background: #f4f7ff;
+}
+
+.project-picker-menu button.active {
+  color: #5752df;
+  background: #eff1ff;
+}
+
+.project-picker-menu strong,
+.project-picker-menu small {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-picker-menu strong {
+  font-size: 13px;
+}
+
+.project-picker-menu small {
+  color: #738095;
+  font-size: 11px;
+}
+
+.phase-card:has(.project-picker.is-open),
+.message:has(.project-picker.is-open) {
+  position: relative;
+  z-index: 1200;
+  overflow: visible;
+}
+
+.project-autofill-grid {
+  margin-top: 12px;
+}
+
+.project-autofill-grid input[readonly] {
+  color: #30384d;
+  background: #fbfcff;
+  cursor: default;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.segmented button {
+  height: auto;
+  min-height: 48px;
+  padding: 10px;
+  text-align: left;
+}
+
+.segmented button.active {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #edf7f8;
+}
+
+.doc-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 13px;
+  background: #ffffff;
+}
+
+.doc-card strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.doc-card span,
+.muted {
+  color: var(--muted);
+}
+
+.phase-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: #ffffff;
+}
+
+.phase-card + .phase-card {
+  margin-top: 12px;
+}
+
+.phase-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.phase-head h3 {
+  margin: 2px 0 0;
+  font-size: 15px;
+}
+
+.eyebrow {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.field-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.field-card {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 10px;
+  background: #fbfdfe;
+}
+
+.field-card.calc {
+  border-left-color: var(--accent);
+}
+
+.field-card.ai {
+  border-left-color: #5270a8;
+}
+
+.field-card.qcc {
+  border-left-color: #7a5aa8;
+}
+
+.field-card strong {
+  display: block;
+}
+
+.field-card p {
+  margin: 0;
+  color: #394854;
+  font-size: 13px;
+}
+
+.field-group,
+.field-method {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.field-method {
+  justify-self: start;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 8px;
+  background: #ffffff;
+}
+
+.draft-stack {
+  display: grid;
+  gap: 31px;
+}
+
+.review-note {
+  border: 1px solid #e6c88e;
+  border-radius: 8px;
+  padding: 10px;
+  color: #724d16;
+  background: #fff9ed;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.document-flow {
+  max-width: 960px;
+}
+
+.document-flow.centered {
+  margin: 0 auto;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.chat-shell.full {
+  grid-template-columns: minmax(0, 960px);
+}
+
+.block-title {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+
+.simple-draft {
+  display: grid;
+  place-items: start;
+}
+
+.draft-document {
+  width: 100%;
+  max-width: 720px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.draft-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 10px;
+}
+
+.draft-title span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.draft-document h3 {
+  margin: 14px 0 10px;
+  font-size: 18px;
+}
+
+.draft-lines {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.draft-lines span {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: #e6ebef;
+}
+
+.draft-lines span:nth-child(2) {
+  width: 86%;
+}
+
+.draft-lines span:nth-child(3) {
+  width: 72%;
+}
+
+.draft-lines span:nth-child(4) {
+  width: 58%;
+}
+
+.draft-section-map {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.draft-section-map div {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 11px;
+  background: var(--surface-soft);
+}
+
+.draft-section-map strong,
+.draft-section-map span {
+  display: block;
+}
+
+.draft-section-map span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.ppt-review {
+  display: grid;
+  gap: 22px;
+  width: 100%;
+}
+
+.ppt-review-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.ppt-review-toolbar span,
+.ppt-review-toolbar small,
+.ppt-panel-title small {
+  display: block;
+  color: #8d96aa;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ppt-review-toolbar strong {
+  display: block;
+  margin-top: 4px;
+  color: #1f2738;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.ppt-review-toolbar small {
+  max-width: 720px;
+  margin-top: 5px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.ppt-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.ppt-nav button {
+  width: 38px;
+  min-height: 38px;
+  border-color: #dfe2ff;
+  border-radius: 50%;
+  padding: 0;
+  color: #625ee8;
+  background: #f6f7ff;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.ppt-nav b {
+  min-width: 116px;
+  color: #2f384d;
+  text-align: center;
+}
+
+.ppt-page-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px 2px 8px;
+  scrollbar-width: thin;
+}
+
+.ppt-page-tabs button {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  min-height: 38px;
+  border: 1px solid #e0e6f4;
+  border-radius: 999px;
+  padding: 0 13px;
+  color: #5c667c;
+  background: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.ppt-page-tabs button b {
+  color: #625ee8;
+}
+
+.ppt-page-tabs button.active {
+  border-color: #a9a7ff;
+  color: #625ee8;
+  background: linear-gradient(135deg, #f1f3ff, #f4fbff);
+  box-shadow: 0 8px 18px rgba(119, 116, 246, 0.12);
+}
+
+.ppt-review-grid {
+  display: grid;
+  grid-template-columns: minmax(420px, 0.42fr) minmax(680px, 0.58fr);
+  gap: 24px;
+  align-items: stretch;
+  height: 640px;
+  min-height: 0;
+}
+
+.ppt-edit-panel,
+.ppt-preview-panel {
+  min-height: 0;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  padding: 18px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.28), rgba(88, 188, 255, 0.22)) border-box;
+}
+
+.ppt-edit-panel {
+  display: grid;
+  /*
+   * REVIEW[PPT-DOC-031]: 左侧核对面板现在固定为 4 个布局行：
+   * 标题、资料上传解析、字段滚动列表、下一页按钮。
+   * 如果仍按旧的 3 行布局，上传卡片会占用字段滚动区并挤压/遮挡第一组字段。
+   */
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: 12px;
+}
+
+.ppt-panel-title {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 0;
+}
+
+.ppt-panel-title span,
+.ppt-preview-title {
+  color: #8d96aa;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.ppt-panel-title strong {
+  color: #1f2738;
+  font-size: 18px;
+}
+
+.ppt-panel-title small {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #7b8499;
+  font-size: 12px;
+}
+
+.ppt-panel-title small i {
+  font-style: normal;
+}
+
+.ppt-document-upload-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  margin: 0;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 12px;
+  background: #f8fbff;
+}
+
+.ppt-document-upload-card span,
+.ppt-document-upload-card small,
+.ppt-document-upload-card em {
+  display: block;
+}
+
+.ppt-document-upload-card span {
+  color: #708093;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.ppt-document-upload-card strong {
+  display: block;
+  margin-top: 2px;
+  color: #20283a;
+  font-size: 14px;
+}
+
+.ppt-document-upload-card small {
+  margin-top: 4px;
+  color: #6b7485;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.ppt-document-upload-card em {
+  margin-top: 4px;
+  color: #246a73;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.ppt-document-upload-card em.warning,
+.ppt-document-upload-card.error small {
+  color: #b64b4b;
+}
+
+.ppt-document-upload-card.success {
+  border-color: #9bd4b2;
+  background: #f3fbf6;
+}
+
+.ppt-document-upload-card.warning {
+  border-color: #e5c978;
+  background: #fffaf0;
+}
+
+.ppt-document-upload-card.loading {
+  border-color: #a9a7ff;
+  background: #f6f7ff;
+}
+
+.ppt-document-upload-button {
+  display: inline-grid;
+  place-items: center;
+  min-width: 92px;
+  min-height: 36px;
+  border: 1px solid #246a73;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #ffffff;
+  background: #246a73;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.ppt-document-upload-button input {
+  display: none;
+}
+
+.ppt-field-list {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 6px;
+}
+
+.ppt-field-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  border-bottom: 1px solid #edf1f8;
+  padding: 0 0 10px;
+}
+
+.ppt-field-row span {
+  display: grid;
+  gap: 5px;
+  color: #2f384d;
+  font-weight: 800;
+}
+
+.ppt-field-row span strong {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.ppt-method {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 2px 8px;
+  color: #6f7890;
+  background: #f0f4fa;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.ppt-method.oa {
+  color: #256b78;
+  background: #e9f8fb;
+}
+
+.ppt-method.manual {
+  color: #8b5c00;
+  background: #fff4d8;
+}
+
+.ppt-method.qcc {
+  color: #625ee8;
+  background: #f0efff;
+}
+
+.ppt-method.ai {
+  color: #246a73;
+  background: #edf7f8;
+}
+
+.ppt-method.auto {
+  color: #257a51;
+  background: #ecf8f1;
+}
+
+.ppt-field-row input,
+.ppt-field-row textarea {
+  border: 1px solid #dfe6f4;
+  border-radius: 10px;
+  background: #fbfcff;
+  font-weight: 700;
+}
+
+.ppt-field-row textarea {
+  min-height: 68px;
+}
+
+.ppt-field-placeholder {
+  display: grid;
+  gap: 9px;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+.ppt-field-placeholder span,
+.ppt-field-placeholder i {
+  display: block;
+  border-radius: 999px;
+  background: #e7ecf4;
+}
+
+.ppt-field-placeholder span {
+  width: 60%;
+  height: 11px;
+}
+
+.ppt-field-placeholder i {
+  height: 8px;
+}
+
+.ppt-field-placeholder i:nth-child(2) {
+  width: 92%;
+}
+
+.ppt-field-placeholder i:nth-child(3) {
+  width: 74%;
+  background: linear-gradient(90deg, rgba(123, 114, 255, 0.28), rgba(88, 188, 255, 0.18));
+}
+
+.ppt-confirm {
+  width: 100%;
+  margin-top: 16px;
+  border-color: #a9a7ff;
+  color: #625ee8;
+  background: #f5f6ff;
+  font-weight: 900;
+}
+
+.ppt-confirm.confirmed {
+  color: #ffffff;
+  border-color: #7774f6;
+  background: #7774f6;
+}
+
+.ppt-preview-panel {
+  align-self: stretch;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+  align-content: start;
+  background:
+    linear-gradient(#fbfcff, #fbfcff) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.28), rgba(88, 188, 255, 0.22)) border-box;
+}
+
+.ppt-preview-head {
+  position: relative;
+  z-index: 8;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  justify-content: stretch;
+  min-height: 46px;
+  padding: 0 156px 0 0;
+}
+
+.ppt-preview-title {
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.ppt-preview-zoom-controls {
+  position: relative;
+  z-index: 9;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  justify-self: end;
+  border: 1px solid #e4e8f6;
+  border-radius: 999px;
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.ppt-preview-zoom-controls button {
+  display: grid;
+  place-items: center;
+  min-width: 28px;
+  height: 26px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0 8px;
+  color: #6e7590;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.ppt-preview-zoom-controls button:hover,
+.ppt-preview-zoom-controls button.active {
+  border-color: #b8b5ff;
+  color: #625ee8;
+  background: #f2f3ff;
+}
+
+.ppt-preview-zoom-controls input {
+  width: 88px;
+  accent-color: #7774f6;
+}
+
+.ppt-preview-zoom-controls b {
+  min-width: 42px;
+  color: #20283a;
+  font-size: 11px;
+  font-weight: 900;
+  text-align: right;
+}
+
+/*
+ * TRACE[PPT-CHAT-007]: PPT slide 内部版式固定为三行网格。
+ *
+ * 缩放窗口只负责把整页 PPT 放大/缩小；04/05 这类字段卡片的完整显示由 slide 内部网格保证，
+ * 避免再次出现“窗口能缩放，但卡片内容在 PPT 内部被 overflow hidden 裁掉”的问题。
+ */
+.ppt-slide {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #dfe6f4;
+  border-radius: 14px;
+  padding: 18px;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(123, 114, 255, 0.04);
+  overflow: hidden;
+}
+
+/*
+ * TRACE[PPT-CHAT-006]: PPT 预览缩放层。
+ *
+ * 原来的 `.ppt-slide` 会跟随右侧容器变窄，但内部字段卡片仍按 PPT 版式排布，
+ * 在 chatbot iframe 中容易被裁切。这里把 PPT 做成固定高度窗口，缩放只发生在窗口内部。
+ */
+.ppt-slide-viewport {
+  --ppt-preview-scale: 1;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 380px;
+  min-height: 320px;
+  max-height: 440px;
+  border: 1px solid #e4e8f6;
+  border-radius: 14px;
+  background:
+    linear-gradient(#f8faff, #f8faff) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.24), rgba(88, 188, 255, 0.18)) border-box;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.ppt-slide-scale {
+  position: relative;
+  width: 920px;
+  height: 518px;
+  padding: 10px;
+}
+
+.ppt-slide-scale > .ppt-slide {
+  width: 920px;
+  height: 518px;
+  aspect-ratio: auto;
+  transform: scale(var(--ppt-preview-scale));
+  transform-origin: top left;
+}
+
+.ppt-slide-zoom {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  border: 1px solid rgba(123, 114, 255, 0.18);
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: #625ee8;
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 11px;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.ppt-completion-module {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  margin-top: 0;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 6px 11px 6px 7px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.46), rgba(88, 188, 255, 0.22)) border-box;
+  box-shadow: 0 8px 18px rgba(119, 116, 246, 0.08);
+  animation: completionLift 420ms ease-out both;
+}
+
+.ppt-completion-donut {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #ffffff 0 55%, transparent 56%),
+    conic-gradient(#7774f6 calc(var(--done) * 1%), #e9edf6 0);
+}
+
+.ppt-completion-donut::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(119, 116, 246, 0.28);
+  border-radius: inherit;
+  opacity: 0;
+  animation: completionPulse 900ms ease-out both;
+  pointer-events: none;
+}
+
+.ppt-completion-donut strong,
+.ppt-completion-donut span {
+  grid-area: 1 / 1;
+}
+
+.ppt-completion-donut strong {
+  transform: none;
+  color: #232b3d;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.ppt-completion-donut span {
+  transform: translateY(13px);
+  color: #8d96aa;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.ppt-completion-list {
+  display: grid;
+  gap: 0;
+}
+
+.ppt-completion-list div {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.ppt-completion-list span {
+  display: block;
+  color: #7b8499;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.ppt-completion-list strong {
+  display: block;
+  margin-top: 2px;
+  color: #1f2738;
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.ppt-unconfirmed-pages strong {
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.ppt-unconfirmed-pages small {
+  display: block;
+  margin-top: 7px;
+  color: #7b8499;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.ppt-preview-monitor {
+  display: flex;
+  width: 100%;
+  min-height: 0;
+  align-items: flex-start;
+}
+
+.sentinel-module {
+  /* TRACE[PPT-LAYOUT-041]: 字段监控模块需要能完整展示提醒卡片，不能被固定高度面板裁半截。 */
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "head issues"
+    "checks issues";
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  border: 1px solid transparent;
+  border-radius: 14px;
+  padding: 10px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.32), rgba(88, 188, 255, 0.22), rgba(54, 161, 111, 0.2)) border-box;
+  box-shadow: 0 12px 24px rgba(82, 93, 180, 0.07);
+}
+
+.sentinel-head {
+  grid-area: head;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sentinel-head span {
+  display: block;
+  color: #8d96aa;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.sentinel-head strong {
+  display: block;
+  color: #20283a;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.sentinel-head b {
+  display: grid;
+  place-items: center;
+  min-width: 42px;
+  height: 28px;
+  border-radius: 999px;
+  color: #625ee8;
+  background: #f1f3ff;
+  font-size: 13px;
+}
+
+.sentinel-body {
+  grid-area: body;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.sentinel-ring {
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #ffffff 0 58%, transparent 59%),
+    conic-gradient(#f0b84f calc(var(--risk) * 1%), #e9edf6 0);
+}
+
+.sentinel-ring strong,
+.sentinel-ring span {
+  grid-area: 1 / 1;
+}
+
+.sentinel-ring strong {
+  transform: translateY(-6px);
+  color: #232b3d;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.sentinel-ring span {
+  max-width: 50px;
+  transform: translateY(15px);
+  color: #8d96aa;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.sentinel-bars {
+  display: grid;
+  gap: 7px;
+}
+
+.sentinel-bars div {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 22px;
+  gap: 8px;
+  align-items: center;
+  color: #6f7890;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.sentinel-bars i {
+  height: 7px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, var(--bar-color) var(--bar), #edf1f8 var(--bar));
+}
+
+.sentinel-bars b {
+  color: #20283a;
+  text-align: right;
+}
+
+.sentinel-checks {
+  grid-area: checks;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  align-content: start;
+}
+
+.sentinel-checks div {
+  display: grid;
+  align-content: center;
+  border: 1px dashed #d6dcef;
+  border-radius: 9px;
+  padding: 6px 8px;
+  background: #fbfcff;
+}
+
+.sentinel-checks span,
+.sentinel-issues b,
+.sentinel-issues span,
+.sentinel-issues em {
+  display: block;
+}
+
+.sentinel-checks span {
+  color: #7b8499;
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.sentinel-checks strong {
+  display: block;
+  margin-top: 2px;
+  color: #20283a;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.sentinel-issues {
+  grid-area: issues;
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+}
+
+.sentinel-issues article {
+  border: 1px solid #f0dfbd;
+  border-radius: 10px;
+  padding: 8px 10px;
+  background: #fffaf0;
+}
+
+.sentinel-issues article.ok {
+  border-color: #cce8d7;
+  background: #f2fbf6;
+}
+
+.sentinel-issues b {
+  color: #7a5a11;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.sentinel-issues article.ok b {
+  color: #257a51;
+}
+
+.sentinel-issues span {
+  margin-top: 3px;
+  color: #20283a;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.sentinel-issues em {
+  margin-top: 2px;
+  color: #7b8499;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.sentinel-alerts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sentinel-alerts span {
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: #825700;
+  background: #fff4d8;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+@keyframes completionLift {
+  from {
+    opacity: 0.82;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes completionPulse {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.88);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ppt-completion-module,
+  .ppt-completion-donut::after {
+    animation: none;
+  }
+}
+
+.ppt-slide-bars {
+  display: grid;
+  grid-template-columns: 0.72fr 1.18fr;
+  height: 28px;
+  margin-bottom: 0;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.ppt-slide-bars span {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  background: #e9001d;
+}
+
+.ppt-slide-bars strong {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  background: #d6a800;
+}
+
+.ppt-slide-body {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 18px;
+  min-height: 0;
+  padding-top: 16px;
+}
+
+.ppt-slide-body.single {
+  grid-template-columns: 1fr;
+}
+
+.ppt-slide-body.single .ppt-slide-main {
+  min-height: 282px;
+}
+
+.ppt-slide-main {
+  position: relative;
+  min-height: 0;
+  border-radius: 14px;
+  padding: 16px;
+  background: #f3f4f6;
+  overflow: hidden;
+}
+
+.ppt-slide-main h4 {
+  margin: 0 0 10px;
+  color: #20283a;
+  font-size: 15px;
+}
+
+.ppt-slide-side strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #20283a;
+  font-size: 12px;
+}
+
+.ppt-slide-main p,
+.ppt-slide-side p {
+  margin: 0 0 6px;
+  color: #222a3a;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.ppt-slide-main b {
+  color: #111827;
+}
+
+.ppt-slide-side {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-height: 0;
+}
+
+.ppt-slide-side div {
+  border: 1px dashed #bcc4d4;
+  border-radius: 4px;
+  padding: 10px;
+  min-height: 0;
+  overflow: visible;
+}
+
+.ppt-slide-side span {
+  display: block;
+  color: #d6a800;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.ppt-slide-footer {
+  display: grid;
+  grid-template-columns: 1fr 4px 4px 1fr;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.ppt-slide-footer i {
+  height: 10px;
+  background: #d1d5db;
+}
+
+.ppt-slide-footer i:nth-child(2) {
+  background: #e9001d;
+}
+
+.ppt-slide-footer i:nth-child(3) {
+  background: #d6a800;
+}
+
+.ppt-cover-slide {
+  display: grid;
+  align-content: center;
+  gap: 18px;
+  padding: 56px;
+  background:
+    linear-gradient(90deg, rgba(233, 0, 29, 0.96) 0 10px, transparent 10px),
+    linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+}
+
+.ppt-cover-label {
+  width: fit-content;
+  border-radius: 999px;
+  padding: 7px 14px;
+  color: #ffffff;
+  background: #e9001d;
+  font-weight: 900;
+}
+
+.ppt-cover-slide h3 {
+  max-width: 72%;
+  margin: 0;
+  color: #121827;
+  font-size: 34px;
+  line-height: 1.18;
+}
+
+.ppt-cover-slide p {
+  margin: 0;
+  color: #d6a800;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.ppt-cover-meta {
+  display: flex;
+  gap: 14px;
+  color: #6b7280;
+  font-weight: 800;
+}
+
+.ppt-directory-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  margin-top: 18px;
+}
+
+.ppt-directory-grid div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #edf1f8;
+  padding: 8px 0;
+}
+
+.ppt-directory-grid b {
+  color: #d6a800;
+  font-size: 18px;
+}
+
+.ppt-directory-grid span {
+  color: #20283a;
+  font-weight: 900;
+}
+
+.preview-box {
+  min-height: 180px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 14px;
+}
+
+.preview-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mock-page {
+  border: 1px solid #d1d8de;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 14px;
+}
+
+.mock-page h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+
+.kv-list {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 8px 12px;
+  font-size: 13px;
+}
+
+.kv-list dt {
+  color: var(--muted);
+}
+
+.kv-list dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.output-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.output-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.output-item strong {
+  display: block;
+}
+
+.output-item span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.step {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.step.active {
+  border-color: var(--primary);
+  background: #edf7f8;
+}
+
+.step b {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.chat-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 16px;
+}
+
+.chat-window {
+  min-height: 690px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.chat-messages {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 18px;
+  overflow: auto;
+}
+
+.message {
+  max-width: 78%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+}
+
+.message.user {
+  justify-self: end;
+  color: #ffffff;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.message.agent {
+  justify-self: start;
+}
+
+.inline-form {
+  margin-top: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.chat-input {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  border-top: 1px solid var(--line);
+  padding: 14px;
+}
+
+.chat-input input {
+  height: 42px;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 390px;
+  gap: 16px;
+}
+
+.wide-grid {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 360px;
+  gap: 16px;
+}
+
+.project-list {
+  display: grid;
+  gap: 10px;
+}
+
+.project-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.project-item.active {
+  border-color: var(--primary);
+  background: #eef7f8;
+}
+
+.mini-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.mini-metric {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.mini-metric span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mini-metric strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+.page-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.page-thumb {
+  min-height: 78px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.page-thumb.ready {
+  border-color: #b7d8c6;
+  background: #f0faf5;
+}
+
+.page-thumb.pending {
+  border-color: #e6c88e;
+  background: #fff9ed;
+}
+
+.pipeline {
+  display: grid;
+  gap: 9px;
+}
+
+.pipeline-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.num {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: var(--primary);
+  font-weight: 800;
+}
+
+@keyframes softRiseIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softScaleIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes thinkingPulse {
+  0%,
+  100% {
+    transform: scale(0.82);
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes thinkingLine {
+  from {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body.platform-prototype {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-soft: #f8faff;
+  --ink: #182033;
+  --muted: #8790a3;
+  --line: #e6ebf5;
+  --line-strong: #d6ddeb;
+  --primary: #7b72ff;
+  --primary-strong: #6258e8;
+  --sidebar: #fbfcff;
+  --shadow: 0 18px 42px rgba(64, 70, 105, 0.08);
+  background: #ffffff;
+}
+
+.platform-prototype .app-layout {
+  grid-template-columns: 326px minmax(0, 1fr);
+  background: #ffffff;
+}
+
+.platform-prototype .left-rail {
+  position: relative;
+  min-height: 100vh;
+  border-right: 1px solid #eef1f8;
+  background: linear-gradient(180deg, #fbfcff 0%, #f7f9ff 100%);
+  padding: 30px 30px 180px;
+}
+
+.platform-prototype .brand {
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.platform-prototype .brand-mark {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 32% 26%, #ffffff 0 7%, transparent 8%),
+    radial-gradient(circle at 68% 26%, #ffffff 0 7%, transparent 8%),
+    linear-gradient(135deg, #58bcff, #716bff 62%, #1e2a69);
+  box-shadow: 0 12px 26px rgba(110, 114, 255, 0.22);
+  font-size: 0;
+}
+
+.platform-prototype .brand-mark::after {
+  content: "AI";
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.platform-prototype .brand strong {
+  font-size: 26px;
+  letter-spacing: 0;
+}
+
+.platform-prototype .brand span {
+  margin-top: 10px;
+  color: #a6adbc;
+  font-size: 16px;
+}
+
+.platform-prototype .rail-button {
+  min-height: 64px;
+  border: 0;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  padding: 0 24px;
+  color: #252c3d;
+  background: transparent;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.platform-prototype .rail-button.active {
+  color: #736cff;
+  background: #eef2ff;
+}
+
+.platform-prototype .rail-section {
+  margin-top: 54px;
+  padding-top: 32px;
+  border-top: 1px solid #e8edf7;
+}
+
+.platform-prototype .rail-section h3 {
+  margin-bottom: 22px;
+  color: #273047;
+  font-size: 18px;
+}
+
+.platform-prototype .history-item {
+  margin-bottom: 12px;
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #98a2b6;
+  background: #f0f3f8;
+  font-size: 16px;
+}
+
+.rail-user {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 34px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #252c3d;
+}
+
+.rail-user-avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(135deg, #9a8bff, #ffc876);
+  font-weight: 900;
+}
+
+.platform-prototype .platform-main {
+  min-height: 100vh;
+  padding: 50px 42px 28px;
+  background: #ffffff;
+}
+
+.platform-hero {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  width: min(1480px, 100%);
+  margin: 0 auto 36px;
+}
+
+.assistant-orb {
+  width: 72px;
+  height: 72px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 65% 35%, #9e84ff 0 13%, transparent 14%),
+    radial-gradient(circle at 36% 60%, #ffffff 0 5%, transparent 6%),
+    linear-gradient(135deg, #111827, #263167 48%, #8a69ff);
+  box-shadow: 0 16px 32px rgba(94, 88, 188, 0.22);
+}
+
+.platform-hero h1 {
+  margin: 0;
+  color: #182033;
+  font-size: clamp(30px, 3vw, 46px);
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.platform-chat-card {
+  width: min(1480px, 100%);
+  min-height: calc(100vh - 210px);
+  margin: 0 auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+}
+
+.platform-prototype .chat-messages {
+  padding: 0 0 24px;
+  gap: 38px;
+}
+
+.platform-prototype .message {
+  max-width: 760px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  padding: 16px 18px;
+  color: #2c3446;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.28), rgba(88, 188, 255, 0.22)) border-box;
+  box-shadow: 0 10px 26px rgba(58, 64, 99, 0.05);
+  font-size: 16px;
+  animation: softRiseIn 220ms ease-out both;
+}
+
+.platform-prototype .message:has(.ppt-review),
+.platform-prototype .message:has(.draft-stack) {
+  width: 100%;
+  max-width: min(1360px, 100%);
+}
+
+.platform-prototype .message.user {
+  color: #ffffff;
+  border-color: #7370f5;
+  background: #7774f6;
+  box-shadow: 0 12px 28px rgba(120, 116, 246, 0.22);
+}
+
+.platform-prototype .inline-form {
+  margin-top: 16px;
+  border-top: 1px solid #edf1f8;
+  padding-top: 16px;
+}
+
+.platform-prototype .segmented {
+  gap: 12px;
+}
+
+.platform-prototype .segmented button {
+  min-height: 58px;
+  border-color: #e0e6f4;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #ffffff;
+  color: #333b50;
+  font-size: 16px;
+  font-weight: 700;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.platform-prototype .segmented button:hover {
+  transform: translateY(-1px);
+}
+
+.platform-prototype .segmented button.active {
+  border-color: #a9a7ff;
+  color: #625ee8;
+  background: #f1f3ff;
+}
+
+.platform-prototype input,
+.platform-prototype select,
+.platform-prototype textarea {
+  border-color: #e0e6f4;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.platform-prototype input,
+.platform-prototype select {
+  height: 46px;
+  padding: 0 14px;
+}
+
+.platform-prototype textarea {
+  min-height: 88px;
+  padding: 12px 14px;
+}
+
+.platform-prototype label {
+  color: #333b50;
+  font-size: 14px;
+}
+
+.platform-prototype .primary {
+  min-height: 46px;
+  border-color: #7774f6;
+  border-radius: 12px;
+  color: #ffffff;
+  background: #7774f6;
+  font-weight: 800;
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.platform-prototype .primary:hover {
+  border-color: #6258e8;
+  background: #6258e8;
+  box-shadow: 0 10px 22px rgba(119, 116, 246, 0.2);
+  transform: translateY(-1px);
+}
+
+.platform-prototype .primary:disabled {
+  cursor: progress;
+  opacity: 0.72;
+  transform: none;
+  box-shadow: none;
+}
+
+.platform-prototype .phase-card {
+  border: 1px solid transparent;
+  border-radius: 18px;
+  padding: 20px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.34), rgba(88, 188, 255, 0.24)) border-box;
+  box-shadow: 0 12px 30px rgba(58, 64, 99, 0.05);
+}
+
+.platform-prototype [data-after-draft]:not(.is-hidden) {
+  animation: softRiseIn 260ms ease-out both;
+}
+
+.platform-prototype [data-ai-draft-preview]:not(.is-hidden) {
+  animation-delay: 20ms;
+}
+
+.platform-prototype .actions[data-after-draft]:not(.is-hidden) {
+  animation-delay: 160ms;
+}
+
+.platform-prototype .document-flow {
+  width: min(1380px, 100%);
+  max-width: none;
+  margin: 0 auto;
+}
+
+.platform-feature-surface {
+  border: 0;
+  border-radius: 24px;
+  padding: 26px;
+  background: linear-gradient(135deg, #eef8ff 0%, #f1efff 100%);
+  box-shadow: 0 18px 44px rgba(83, 91, 140, 0.1);
+}
+
+.feature-title {
+  margin-bottom: 18px;
+}
+
+.feature-title span {
+  color: #72809b;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.feature-title h2 {
+  margin: 4px 0 0;
+  color: #1c2437;
+  font-size: 28px;
+}
+
+.platform-prototype .block-title {
+  font-size: 18px;
+}
+
+.platform-prototype .draft-document {
+  max-width: none;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fafbff 100%) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.34), rgba(88, 188, 255, 0.24)) border-box;
+  animation: softScaleIn 260ms ease-out both;
+}
+
+.platform-prototype .draft-section-map div {
+  border-color: #e6ebf7;
+  border-radius: 14px;
+  background: #f7f9ff;
+}
+
+.platform-prototype .chat-input {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  border: 1px solid #edf1f8;
+  border-radius: 22px;
+  padding: 16px;
+  background: #ffffff;
+  box-shadow: 0 14px 38px rgba(40, 45, 72, 0.12);
+}
+
+.platform-prototype .chat-input input {
+  height: 48px;
+  border: 0;
+  color: #7d879b;
+  font-size: 18px;
+}
+
+.platform-prototype .chat-input input:focus {
+  outline: none;
+}
+
+.platform-prototype .output-item {
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.3), rgba(88, 188, 255, 0.22)) border-box;
+  animation: softRiseIn 220ms ease-out both;
+}
+
+.thinking-card {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 14px;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f6f7ff 100%) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.3), rgba(88, 188, 255, 0.22)) border-box;
+  box-shadow: 0 10px 24px rgba(83, 91, 140, 0.07);
+  animation: softRiseIn 180ms ease-out both;
+}
+
+.thinking-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5f66dc;
+}
+
+.thinking-head strong {
+  font-size: 14px;
+}
+
+.thinking-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #7774f6;
+  animation: thinkingPulse 900ms ease-in-out infinite;
+}
+
+.thinking-steps {
+  display: grid;
+  gap: 7px;
+  color: #8a93a8;
+  font-size: 13px;
+}
+
+.thinking-steps span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: thinkingLine 220ms ease-out both;
+}
+
+.thinking-steps span:nth-child(2) {
+  animation-delay: 110ms;
+}
+
+.thinking-steps span:nth-child(3) {
+  animation-delay: 220ms;
+}
+
+.thinking-steps span::before {
+  content: "";
+  width: 28px;
+  height: 6px;
+  border-radius: 999px;
+  background: #dfe4f2;
+}
+
+.scheme-three-desktop {
+  min-width: 1180px;
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 46%);
+}
+
+.scheme3-page {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.scheme3-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1860px;
+  margin: 0 auto 22px;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  padding: 18px 22px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.28), rgba(88, 188, 255, 0.2)) border-box;
+  box-shadow: 0 16px 42px rgba(83, 91, 140, 0.08);
+}
+
+.scheme3-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.assistant-orb.small {
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 12px 24px rgba(94, 88, 188, 0.18);
+}
+
+.scheme3-title strong {
+  display: block;
+  color: #182033;
+  font-size: 24px;
+}
+
+.scheme3-title span {
+  display: block;
+  margin-top: 3px;
+  color: #8790a3;
+}
+
+.scheme3-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7f879b;
+}
+
+.scheme3-tabs span {
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #f5f7ff;
+  font-weight: 700;
+}
+
+.scheme3-tabs span.active {
+  color: #625ee8;
+  background: #edefff;
+}
+
+.scheme3-shell {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: stretch;
+  max-width: 1780px;
+  min-height: calc(100vh - 138px);
+  margin: 0 auto;
+}
+
+.scheme3-side,
+.scheme3-insight {
+  display: grid;
+  align-content: start;
+  gap: 34px;
+  min-height: 100%;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  padding: 18px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.28), rgba(88, 188, 255, 0.2)) border-box;
+  box-shadow: 0 16px 42px rgba(83, 91, 140, 0.08);
+}
+
+/*
+ * iframe 嵌入模式。
+ *
+ * 使用场景：
+ * - 外部大模型窗口通过 /ppt-risk-report/embed 嵌入本页面
+ * - 页面需要保留完整工作区，但减少“独立站点”的外框感
+ */
+.ppt-report-embed {
+  background: #ffffff;
+}
+
+.ppt-report-embed .scheme3-page {
+  min-height: 100vh;
+  padding: 12px;
+}
+
+.ppt-report-embed .scheme3-topbar {
+  margin-bottom: 12px;
+  padding: 12px 16px;
+}
+
+.ppt-report-embed .scheme3-title strong {
+  font-size: 18px;
+}
+
+.ppt-report-embed .scheme3-title span {
+  font-size: 12px;
+}
+
+.ppt-report-embed .scheme3-shell {
+  gap: 12px;
+  min-height: calc(100vh - 100px);
+}
+
+.ppt-report-embed .scheme3-side,
+.ppt-report-embed .scheme3-insight {
+  border-radius: 16px;
+  padding: 14px;
+}
+
+/*
+ * TRACE[PPT-CHAT-001]: 外部 chatbot 专用 iframe 模式。
+ *
+ * 这个模式刻意舍弃独立平台的顶部、左侧项目栏和右侧外框，只保留 PPT 生成流程本体。
+ * 外部聊天窗口负责承载对话，iframe 内只负责字段复核、模拟分析和最终生成。
+ */
+.ppt-report-chatbot-embed {
+  background: transparent;
+}
+
+.ppt-report-chatbot-embed .ppt-chatbot-page {
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+}
+
+.ppt-report-chatbot-embed .ppt-chatbot-shell {
+  display: block;
+  min-height: auto;
+}
+
+.ppt-report-chatbot-embed .ppt-chatbot-workspace {
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: none;
+}
+
+.ppt-report-chatbot-embed .feature-title {
+  margin-bottom: 16px;
+}
+
+.ppt-report-chatbot-embed .feature-title h2 {
+  font-size: 24px;
+}
+
+.ppt-report-chatbot-embed .ppt-chatbot-output-card {
+  margin-top: 16px;
+}
+
+.ppt-report-chatbot-embed .ppt-chatbot-output-card .output-list {
+  margin-top: 0;
+}
+
+.ppt-report-chatbot-embed .ppt-chatbot-output-card .output-item,
+.ppt-report-chatbot-embed .ppt-chatbot-output-card .ai-summary-module {
+  margin-top: 0;
+  box-shadow: none;
+}
+
+.ppt-report-chatbot-embed .ppt-chatbot-output-card .summary-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ppt-report-chatbot-embed .ppt-slide-viewport {
+  /* TRACE[PPT-CHAT-006]: chatbot 中给 PPT 一个更大的固定预览窗口；90% 左右缩放也能完整看到 04/05。 */
+  height: 520px;
+  max-height: 520px;
+}
+
+@media (max-width: 860px) {
+  .ppt-report-chatbot-embed .ppt-chatbot-workspace {
+    padding: 12px;
+  }
+
+  .ppt-report-chatbot-embed .ppt-chatbot-output-card .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.side-card,
+.scheme3-insight > .phase-card,
+.scheme3-insight .output-list > * {
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.28), rgba(88, 188, 255, 0.2)) border-box;
+  box-shadow: 0 16px 42px rgba(83, 91, 140, 0.08);
+}
+
+.side-card {
+  padding: 18px;
+}
+
+.side-card > span {
+  display: block;
+  color: #8d96aa;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.side-card > strong {
+  display: block;
+  margin-top: 8px;
+  color: #1f2738;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.side-card dl {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: 9px 10px;
+  margin: 16px 0 0;
+}
+
+.side-card dt {
+  color: #8d96aa;
+}
+
+.side-card dd {
+  margin: 0;
+  color: #293246;
+  font-weight: 800;
+}
+
+.side-file {
+  margin-top: 12px;
+  border: 1px solid #e0e6f4;
+  border-radius: 14px;
+  padding: 12px;
+  color: #293246;
+  background: #f8faff;
+  font-weight: 800;
+}
+
+.scheme3-workspace {
+  min-width: 0;
+  min-height: 100%;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, #eef8ff 0%, #f1efff 100%) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.34), rgba(88, 188, 255, 0.24)) border-box;
+  box-shadow: 0 16px 42px rgba(83, 91, 140, 0.08);
+}
+
+.scheme3-workspace .phase-card,
+.scheme3-insight .phase-card {
+  box-shadow: none;
+}
+
+.scheme3-workspace .draft-stack,
+.scheme3-workspace .phase-card,
+.scheme3-workspace .ppt-review,
+.scheme3-workspace .ppt-preview-panel,
+.scheme3-workspace .ppt-edit-panel {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.scheme3-workspace .project-select-card,
+.scheme3-workspace .project-picker,
+.scheme3-workspace .project-autofill-grid,
+.scheme3-workspace .form-grid,
+.scheme3-workspace .ppt-review-toolbar,
+.scheme3-workspace .ppt-page-tabs,
+.scheme3-workspace .ppt-review-grid {
+  min-width: 0;
+}
+
+/* The parser supplements the preview; it no longer takes the main workspace row. */
+.scheme3-workspace .draft-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: auto;
+  overflow: visible;
+}
+
+.scheme3-workspace .draft-stack > .phase-card {
+  height: auto;
+}
+
+.ppt-financial-sources {
+  display: block;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.scheme3-workspace .ppt-review-grid {
+  grid-template-columns: minmax(260px, 0.38fr) minmax(0, 0.62fr);
+  gap: 16px;
+  /*
+   * TRACE[PPT-LAYOUT-042]: 右侧 PPT 预览 + 字段监控会超过固定 680px。
+   * 改成最小高度，让模块按内容自然撑开，避免底部提醒卡片被裁切。
+   */
+  height:  clamp(680px, calc(100vh - 260px), 860px);
+  min-height: 0;
+  align-items: stretch;
+}
+
+.scheme3-workspace .ppt-field-row {
+  grid-template-columns: 118px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.scheme3-workspace .ppt-edit-panel,
+.scheme3-workspace .ppt-preview-panel {
+  padding: 14px;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.scheme3-workspace .ppt-preview-panel {
+  /* TRACE[PPT-LAYOUT-044]: 预览面板必须允许字段监控模块向下展开。
+     不能和 overflow-x:hidden 混用，否则浏览器会把 overflow-y:visible 计算成 auto。 */
+  overflow: visible;
+}
+
+.scheme3-workspace .ppt-slide {
+  padding: 12px;
+}
+
+.scheme3-workspace .ppt-slide-main,
+.scheme3-workspace .ppt-slide-body.single .ppt-slide-main {
+  min-height: 0;
+}
+
+.scheme3-workspace .ppt-slide-bars {
+  height: 24px;
+  font-size: 11px;
+}
+
+.scheme3-workspace .ppt-slide-body {
+  gap: 10px;
+  padding-top: 10px;
+}
+
+.scheme3-workspace .ppt-slide-main {
+  padding: 12px;
+}
+
+.scheme3-workspace .ppt-slide-main h4 {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.scheme3-workspace .ppt-slide-main p,
+.scheme3-workspace .ppt-slide-side p {
+  margin-bottom: 3px;
+  font-size: 9px;
+  line-height: 1.22;
+}
+
+.scheme3-workspace .ppt-slide-side {
+  gap: 8px;
+}
+
+.scheme3-workspace .ppt-slide-side div {
+  min-height: 0;
+  padding: 6px 7px;
+}
+
+.scheme3-workspace .ppt-slide-side span {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.scheme3-workspace .ppt-slide-side strong {
+  margin-bottom: 3px;
+  font-size: 10px;
+  line-height: 1.15;
+}
+
+/*
+ * TRACE[PPT-CHAT-008]: 真实 PPTX 模板元素预览。
+ *
+ * 这一层不再使用旧的模拟 PPT grid/padding，而是按 manifest 中的 PPTX 坐标绝对定位。
+ * manifest 的坐标来自真实模板，所以字段文本框、图片和装饰形状会尽量贴近最终生成的 PPTX。
+ */
+.ppt-slide-scale > .pptx-template-slide,
+.scheme3-workspace .ppt-slide-scale > .pptx-template-slide {
+  position: relative;
+  display: block;
+  width: 920px;
+  height: 518px;
+  padding: 0;
+  background: #ffffff;
+}
+
+.pptx-template-element {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.pptx-template-image {
+  display: block;
+  overflow: hidden;
+  object-fit: fill;
+}
+
+/*
+ * TRACE[PPT-TEMPLATE-NEW-007]: 新版 PPTX 模板预览底图。
+ *
+ * PPTX 页面已按 16:9 渲染成 PNG，这里只负责在固定 slide 窗口完整展示。
+ * 字段编辑仍在左侧表单完成，最终生成时由后端 PPTX 写入逻辑消费字段 JSON。
+ */
+.ppt-template-image-slide,
+.pptx-template-image-backed {
+  overflow: hidden;
+}
+
+.ppt-template-image-page,
+.pptx-template-background {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.pptx-template-overlay {
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  white-space: normal;
+  opacity: 1;
+  text-shadow: none;
+  mix-blend-mode: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
+
+.pptx-template-overlay span {
+  display: block;
+  width: 100%;
+  opacity: 1;
+}
+
+.pptx-template-text-overlay {
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+
+.pptx-template-cell-overlay {
+  border-radius: 0;
+  background-clip: padding-box;
+}
+
+/*
+ * TRACE[PPT-PREVIEW-003]: 第 15-18 页的复核正文不是普通白底字段，
+ * 需要模拟 PPTX 中的黄色标题块和灰色正文底板。
+ */
+.pptx-template-review-panel,
+.pptx-template-review-title,
+.pptx-template-review-body {
+  pointer-events: none;
+}
+
+.pptx-template-review-title {
+  align-items: center;
+  background-clip: border-box;
+}
+
+.pptx-template-review-body {
+  align-items: flex-start;
+  white-space: pre-wrap;
+}
+
+/*
+ * TRACE[PPT-TEMPLATE-NEW-009]: 新版模板的 HTML 字段层。
+ *
+ * 这一层取代单纯 PDF 图片预览，所有可变文本都通过 data-ppt-bind 绑定 demoState。
+ * 左侧字段变化后，右侧会重新渲染这些 HTML 节点，实现“粗糙预览实时更新”。
+ */
+.ppt-template-html-slide {
+  position: relative;
+  overflow: hidden;
+  color: #111827;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+}
+
+.ppt-template-header {
+  position: absolute;
+  top: 0;
+  left: 72px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 820px;
+  height: 32px;
+  color: #ffffff;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.ppt-template-header span,
+.ppt-template-header strong {
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.ppt-template-header span {
+  background: #e60012;
+}
+
+.ppt-template-header strong {
+  background: #dca700;
+}
+
+.ppt-template-header.is-titleless span,
+.ppt-template-header.is-titleless strong {
+  color: transparent;
+}
+
+.ppt-template-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 5px 5px auto 5px 5px;
+  gap: 5px;
+  align-items: center;
+  height: 28px;
+  padding: 0 70px 0 0;
+}
+
+.ppt-template-footer i:first-child {
+  height: 16px;
+  background: #c9c9c9;
+}
+
+.ppt-template-footer i:nth-child(2) {
+  height: 20px;
+  background: #e60012;
+}
+
+.ppt-template-footer i:nth-child(3),
+.ppt-template-footer i:nth-child(6) {
+  height: 20px;
+  background: #dca700;
+}
+
+.ppt-template-footer i:nth-child(5) {
+  height: 20px;
+  background: #e60012;
+}
+
+.ppt-template-footer strong {
+  color: #5b5b5b;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.ppt-template-cover {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 64px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f7f7 100%);
+}
+
+.ppt-template-cover h3 {
+  color: #111827;
+  font-size: 38px;
+  line-height: 1.25;
+}
+
+.ppt-template-cover p {
+  margin-top: 120px;
+  color: #e60012;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.ppt-template-directory,
+.ppt-template-generic-grid,
+.ppt-overview-layout,
+.ppt-risk-layout {
+  padding: 62px 44px 48px;
+}
+
+.ppt-template-directory {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 34px;
+}
+
+.ppt-template-directory.is-main-directory {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 86px 0 0 280px;
+}
+
+.ppt-template-directory p {
+  margin: 0;
+  border-bottom: 1px solid #d7dbe5;
+  padding-bottom: 8px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.ppt-template-directory b {
+  margin-right: 12px;
+  color: #dca700;
+}
+
+.ppt-template-directory.is-main-directory p {
+  width: max-content;
+  border: 0;
+  color: #000000;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.ppt-template-appendix-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  height: 100%;
+  color: #000000;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.ppt-template-appendix-title span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #e60012;
+}
+
+.ppt-template-body-title {
+  grid-column: 1 / -1;
+  margin: 0 0 14px;
+  color: #e60012;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.ppt-template-statement {
+  /* TRACE[PPT-REVIEW-001]: 项目优势/风险措施/法务风险页按源 PDF 的黄箭头标题和灰底正文框定位。 */
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+
+.ppt-template-statement-ribbon {
+  position: absolute;
+  top: 82px;
+  left: 72px;
+  z-index: 1;
+  width: 350px;
+  height: 46px;
+  padding-left: 34px;
+  clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
+  color: #ffffff;
+  background: #dca700;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 46px;
+}
+
+.ppt-template-statement-box {
+  position: absolute;
+  top: 105px;
+  left: 135px;
+  width: 685px;
+  height: 330px;
+  padding: 58px 76px;
+  background: #eeeeee;
+}
+
+.ppt-template-statement-copy {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.ppt-template-manual-only {
+  /* TRACE[PPT-MANUAL-022]: 无输入字段页的 HTML 兜底占位，避免误显示可编辑字段。 */
+  display: grid;
+  place-items: center;
+  height: calc(100% - 86px);
+  margin: 78px 140px 0;
+  background: #eeeeee;
+  color: #111827;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ppt-template-thanks {
+  position: relative;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 32px;
+  align-items: center;
+  height: 100%;
+  padding: 0 110px 0 140px;
+  background: linear-gradient(90deg, #f3f4f6 0 26%, #ffffff 26% 100%);
+}
+
+.ppt-template-thanks::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 76px;
+  height: 260px;
+  background: #dca700;
+  clip-path: polygon(0 0, 100% 0, 42% 100%, 0 100%);
+  content: "";
+}
+
+.ppt-template-thanks strong {
+  display: block;
+  padding: 30px 42px;
+  color: #ffffff;
+  background: #e60012;
+  font-size: 42px;
+  font-weight: 900;
+  transform: skewX(-10deg);
+}
+
+.ppt-template-thanks p {
+  margin: 0;
+  color: #000000;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.ppt-template-list-layout,
+.ppt-template-business-layout,
+.ppt-template-prior-layout,
+.ppt-template-credit-info {
+  padding: 62px 70px 46px;
+}
+
+.ppt-template-list-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 34px;
+  align-items: start;
+}
+
+/* Current-project initiation images; preserve proportions and source captions. */
+.ppt-site-asset-layout {
+  grid-template-columns: 280px minmax(0, 1fr);
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.ppt-credit-asset-layout {
+  position: absolute;
+  inset: 62px 70px 46px;
+}
+
+.ppt-project-asset-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  gap: 18px;
+  height: 100%;
+  min-height: 0;
+}
+
+.ppt-project-asset-gallery figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 10px;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+.ppt-project-asset-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.ppt-project-asset-gallery figcaption {
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.ppt-project-asset-empty {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 160px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px dashed currentColor;
+  font-size: 18px;
+  text-align: center;
+}
+
+.ppt-template-list-layout ol,
+.ppt-template-prior-layout ul {
+  margin: 0;
+  padding-left: 24px;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.85;
+}
+
+.ppt-template-photo-placeholder {
+  display: grid;
+  place-items: center;
+  min-height: 240px;
+  border: 2px dashed #d1d5db;
+  color: #9ca3af;
+  text-align: center;
+}
+
+.ppt-template-photo-placeholder strong {
+  color: #dca700;
+  font-size: 20px;
+}
+
+.ppt-template-photo-placeholder span {
+  padding: 0 20px;
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.ppt-template-check-table,
+.ppt-template-condition-table,
+.ppt-template-emc-table,
+.ppt-template-approval-table,
+.ppt-template-score-table,
+.ppt-template-generation-table {
+  width: calc(100% - 110px);
+  margin: 58px 55px 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #000000;
+  font-size: 11px;
+}
+
+.ppt-template-check-table th,
+.ppt-template-check-table td,
+.ppt-template-condition-table th,
+.ppt-template-condition-table td,
+.ppt-template-emc-table th,
+.ppt-template-emc-table td,
+.ppt-template-approval-table th,
+.ppt-template-approval-table td,
+.ppt-template-score-table th,
+.ppt-template-score-table td,
+.ppt-template-generation-table th,
+.ppt-template-generation-table td {
+  border: 1px solid #e60012;
+  padding: 5px 6px;
+  vertical-align: middle;
+}
+
+.ppt-template-check-table th,
+.ppt-template-condition-table th,
+.ppt-template-emc-table th,
+.ppt-template-approval-table th,
+.ppt-template-score-table th,
+.ppt-template-generation-table th {
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  color: #000000;
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.ppt-template-business-layout {
+  /* TRACE[PPT-BIZ-003]: 收益率达标页采用绝对定位，贴近 PDF 左侧结论 + 右侧条件表布局。 */
+  position: relative;
+  height: 100%;
+  padding: 0;
+}
+
+.ppt-template-business-layout h4,
+.ppt-template-credit-info h4 {
+  margin: 0 0 10px;
+  color: #b98c00;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.ppt-template-business-summary {
+  position: absolute;
+  top: 58px;
+  left: 68px;
+  width: 330px;
+}
+
+.ppt-template-business-summary h4 {
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+.ppt-template-business-layout p,
+.ppt-template-business-layout li {
+  margin: 0 0 12px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.42;
+}
+
+.ppt-template-business-layout ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.ppt-template-business-layout strong {
+  display: inline;
+  padding: 0 4px;
+  background: #fff200;
+  font-weight: 900;
+}
+
+.ppt-template-green-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  margin-left: 3px;
+  border-radius: 3px;
+  color: #ffffff;
+  background: #39b66a;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ppt-template-business-layout small {
+  position: absolute;
+  top: 442px;
+  left: 452px;
+  width: 420px;
+  color: #000000;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.ppt-template-condition-table,
+.ppt-template-emc-table,
+.ppt-template-approval-table {
+  width: 100%;
+  margin: 0;
+}
+
+.ppt-template-condition-table {
+  position: absolute;
+  top: 38px;
+  left: 450px;
+  width: 455px;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.ppt-template-condition-table th:first-child,
+.ppt-template-condition-table td:first-child {
+  width: 55px;
+}
+
+.ppt-template-condition-table th:nth-child(2),
+.ppt-template-condition-table td:nth-child(2) {
+  width: 300px;
+}
+
+.ppt-template-condition-table th:nth-child(3),
+.ppt-template-condition-table td:nth-child(3) {
+  width: 100px;
+}
+
+.ppt-template-condition-table td {
+  height: 32px;
+}
+
+.ppt-template-emc-table {
+  /* TRACE[PPT-BIZ-004]: EMC 商务条款表放大并上移，避免截图中表格偏小、留白过多。 */
+  width: calc(100% - 150px);
+  margin: 45px 75px 0;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.ppt-template-emc-table th,
+.ppt-template-emc-table td {
+  padding: 5px 7px;
+}
+
+.ppt-template-emc-table th {
+  font-size: 18px;
+}
+
+.ppt-template-emc-table td {
+  height: 31px;
+  font-weight: 500;
+}
+
+.ppt-template-emc-table th:first-child,
+.ppt-template-emc-table td:first-child {
+  width: 29%;
+}
+
+.ppt-template-emc-table th:nth-child(2),
+.ppt-template-emc-table td:nth-child(2) {
+  width: 50%;
+}
+
+.ppt-template-emc-table th:nth-child(3),
+.ppt-template-emc-table td:nth-child(3) {
+  width: 21%;
+}
+
+.ppt-template-sensitivity-layout {
+  /* TRACE[PPT-BIZ-002]: 敏感性分析页左侧保留两组灰色矩阵，右侧保留说明文字。 */
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  gap: 38px;
+  padding: 46px 52px 40px;
+}
+
+.ppt-template-sensitivity-layout section {
+  min-width: 0;
+}
+
+.ppt-template-sensitivity-layout h4 {
+  margin: 0 0 8px;
+  color: #000000;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.ppt-template-sensitivity-matrix {
+  width: 100%;
+  margin: 0 0 26px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  color: #000000;
+  font-family: SimSun, "Songti SC", "Microsoft YaHei", serif;
+  font-size: 11px;
+}
+
+.ppt-template-sensitivity-matrix th,
+.ppt-template-sensitivity-matrix td {
+  height: 18px;
+  border: 1px solid #ffffff;
+  padding: 0 3px;
+  background: #eeeeee;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ppt-template-sensitivity-matrix th {
+  background: #cbc7c7;
+  font-weight: 400;
+}
+
+.ppt-template-sensitivity-layout p,
+.ppt-template-prior-layout li,
+.ppt-template-credit-info p {
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.sensitivity-right {
+  padding-top: 72px;
+}
+
+.sensitivity-right p {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.sensitivity-warning {
+  color: #e60012 !important;
+}
+
+.sensitivity-second {
+  margin-top: 62px !important;
+}
+
+.ppt-template-prior-layout h3 {
+  margin: 0 0 34px;
+  color: #000000;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.ppt-template-approval-table {
+  /* TRACE[PPT-REVIEW-002]: 立项会变更事宜表按 PDF 3 列中置显示，第三列留给投决数据人工填入。 */
+  width: 640px;
+  margin: 56px auto 0;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.ppt-template-approval-table th,
+.ppt-template-approval-table td {
+  height: 37px;
+  padding: 5px 8px;
+}
+
+.ppt-template-approval-table th {
+  font-size: 18px;
+}
+
+.ppt-template-approval-table th:first-child,
+.ppt-template-approval-table td:first-child {
+  width: 34%;
+}
+
+.ppt-template-score-table {
+  /* TRACE[PPT-SCORE-001]: 评分表按新版 PPTX 原表比例重排，固定细则区，得分/备注区保留字段绑定。 */
+  width: calc(100% - 86px);
+  margin: 48px 43px 0;
+  table-layout: fixed;
+  border: 1px solid #000000;
+  font-family: SimSun, "Songti SC", "Microsoft YaHei", serif;
+  font-size: 8px;
+  line-height: 1.16;
+}
+
+.ppt-template-generation-table {
+  width: 100%;
+  margin: 0;
+  table-layout: fixed;
+  border: 1px solid #000000;
+  font-family: SimSun, "Songti SC", "Microsoft YaHei", serif;
+  color: #000000;
+}
+
+.ppt-template-score-table th,
+.ppt-template-score-table td,
+.ppt-template-generation-table th,
+.ppt-template-generation-table td {
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+.ppt-template-score-table th,
+.ppt-template-generation-table th {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  background: #ffffff;
+  font-weight: 900;
+}
+
+.ppt-template-score-table th,
+.ppt-template-score-table td {
+  padding: 2px 3px;
+  vertical-align: middle;
+}
+
+.ppt-template-score-table .score-col-level {
+  width: 18.5%;
+}
+
+.ppt-template-score-table .score-col-metric {
+  width: 9%;
+}
+
+.ppt-template-score-table .score-col-weight {
+  width: 3.2%;
+}
+
+.ppt-template-score-table .score-col-rule {
+  width: 45%;
+}
+
+.ppt-template-score-table .score-col-value {
+  width: 11.8%;
+}
+
+.ppt-template-score-table .score-col-note {
+  width: 13.5%;
+}
+
+.ppt-template-score-table .score-level,
+.ppt-template-score-table td:nth-child(2),
+.ppt-template-score-table td:nth-child(3) {
+  text-align: center;
+}
+
+.ppt-template-score-table .score-level {
+  font-size: 9px;
+}
+
+.ppt-template-score-table .score-level-note {
+  padding: 4px 7px;
+  font-size: 8px;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.ppt-template-score-table .score-rule {
+  text-align: left;
+  white-space: normal;
+}
+
+.ppt-template-score-table .score-fill {
+  background: #e3f3e9;
+  font-size: 9px;
+  text-align: center;
+}
+
+.ppt-template-score-table .score-total td {
+  text-align: center;
+}
+
+.ppt-template-score-table .score-total-fill {
+  background: #dbe8f7;
+  text-align: center;
+}
+
+.ppt-template-score-table .score-grand-total td:first-child {
+  text-align: right;
+}
+
+.ppt-template-score-table.is-score-page-two {
+  margin-top: 40px;
+  font-size: 7.6px;
+  line-height: 1.12;
+}
+
+.ppt-template-score-table.is-score-page-two th,
+.ppt-template-score-table.is-score-page-two td {
+  padding: 1px 3px;
+}
+
+.ppt-template-generation-grid {
+  /* TRACE[PPT-SCORE-006]: 发电量及收益预测按 PDF 第 23 页左右双表排布，空白格后续由人工或测算模型填充。 */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 70px;
+  margin: 42px 66px 0;
+}
+
+.ppt-template-generation-table th,
+.ppt-template-generation-table td {
+  height: 25px;
+  padding: 0 6px;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.ppt-template-generation-table th {
+  height: 30px;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.ppt-template-generation-table th:first-child,
+.ppt-template-generation-table td:first-child {
+  width: 22%;
+}
+
+.ppt-template-generation-table .generation-summary td {
+  background: #fff0c7;
+}
+
+.ppt-template-credit-info {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 24px;
+}
+
+.ppt-template-credit-info.is-manual-image-page {
+  /* TRACE[PPT-MANUAL-024]: 第 24 页预留资信图片/材料粘贴区，不绑定企查查字段。 */
+  grid-template-columns: 1fr;
+  align-items: center;
+  height: calc(100% - 84px);
+}
+
+.ppt-template-credit-info section {
+  min-width: 0;
+  border: 1px solid #d1d5db;
+  padding: 18px;
+}
+
+.ppt-template-credit-info.is-manual-image-page section {
+  min-height: 260px;
+  display: grid;
+  align-content: center;
+  border: 0;
+  background: #eeeeee;
+}
+
+.ppt-template-generic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 24px;
+}
+
+.ppt-template-generic-grid section,
+.ppt-overview-card,
+.ppt-risk-layout section {
+  min-width: 0;
+  border: 0;
+  padding: 6px 8px;
+  background: #ffffff;
+}
+
+.ppt-template-generic-grid h4,
+.ppt-overview-card h4,
+.ppt-risk-layout h4 {
+  margin: 0 0 8px;
+  color: #dca700;
+  font-size: 17px;
+}
+
+.ppt-template-generic-grid p,
+.ppt-overview-card p,
+.ppt-risk-layout p,
+.ppt-finance-summary p {
+  margin: 0 0 5px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.28;
+}
+
+.ppt-template-generic-grid b,
+.ppt-overview-card b,
+.ppt-risk-layout b,
+.ppt-finance-summary b {
+  color: #111827;
+}
+
+.ppt-overview-layout {
+  display: grid;
+  grid-template-columns: 1.22fr 1fr 1fr;
+  gap: 18px 28px;
+}
+
+.ppt-overview-card.primary {
+  grid-row: span 2;
+  background: #f2f3f5;
+  border-radius: 24px;
+  padding: 18px 20px;
+}
+
+.ppt-finance-table {
+  width: calc(100% - 80px);
+  margin: 56px 40px 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 9px;
+}
+
+.ppt-finance-table th,
+.ppt-finance-table td,
+.ppt-risk-table th,
+.ppt-risk-table td {
+  border: 1px solid #111827;
+  padding: 4px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.ppt-finance-table th,
+.ppt-risk-table th {
+  color: #e60012;
+  font-weight: 900;
+}
+
+.ppt-finance-summary {
+  display: grid;
+  gap: 7px;
+  margin: 28px 38px 0;
+  font-size: 11px;
+}
+
+.ppt-risk-layout {
+  display: grid;
+  grid-template-columns: 0.7fr 1.35fr;
+  gap: 32px;
+}
+
+.ppt-risk-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 11px;
+}
+
+.ppt-risk-table th,
+.ppt-risk-table td {
+  border-color: #e60012;
+  color: #000000;
+  font-weight: 600;
+}
+
+.ppt-risk-table th {
+  border-top-width: 3px;
+  border-bottom-width: 3px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.ppt-risk-layout section {
+  padding-top: 48px;
+  border: 0;
+}
+
+.ppt-risk-layout section h4 {
+  color: #b98c00;
+  font-size: 18px;
+}
+
+.ppt-user-intro-layout {
+  position: relative;
+  height: 100%;
+  padding: 58px 34px 48px 92px;
+}
+
+.intro-block {
+  position: absolute;
+  left: 92px;
+  width: 470px;
+}
+
+.intro-company { top: 58px; }
+.intro-capacity { top: 158px; }
+.intro-customers { top: 292px; }
+.intro-mode { top: 408px; }
+
+.intro-block h4 {
+  margin: 0 0 12px;
+  color: #b98c00;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.intro-block p {
+  margin: 0 0 0 24px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.intro-capacity p,
+.intro-customers p {
+  font-size: 15px;
+}
+
+.ppt-qcc-snapshot {
+  position: absolute;
+  top: 72px;
+  right: 48px;
+  width: 286px;
+  color: #6b7280;
+  font-size: 10px;
+}
+
+.ppt-qcc-snapshot b {
+  color: #1f78ff;
+  font-weight: 700;
+}
+
+.qcc-tree {
+  display: grid;
+  gap: 5px;
+  margin-top: 24px;
+}
+
+.qcc-tree span {
+  border-left: 3px solid #3ba1ff;
+  padding: 7px 8px;
+  background: #f7f9fc;
+  color: #1f78ff;
+  line-height: 1.25;
+}
+
+.ppt-credit-risk-layout {
+  position: relative;
+  height: 100%;
+  padding: 58px 32px 48px 92px;
+}
+
+.credit-copy {
+  width: 560px;
+}
+
+.credit-copy h4 {
+  margin: 0 0 12px;
+  color: #b98c00;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.credit-copy h4:not(:first-child) {
+  margin-top: 68px;
+}
+
+.credit-copy ul {
+  margin: 0 0 8px 20px;
+  padding: 0;
+}
+
+.credit-copy li {
+  margin-bottom: 7px;
+  color: #000000;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.credit-conclusion {
+  margin: 8px 0 0 20px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.credit-risk-panel {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  width: 260px;
+  min-height: 250px;
+  padding: 14px;
+  background: #f8fafc;
+}
+
+.credit-panel-head {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 12px;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.credit-panel-head b,
+.credit-risk-panel p b {
+  color: #00a968;
+}
+
+.risk-pyramid {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 158px;
+  margin-top: 12px;
+  color: #ef4444;
+  font-size: 12px;
+}
+
+.risk-pyramid i,
+.risk-pyramid strong {
+  display: block;
+  width: 154px;
+  height: 26px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #d1d5db;
+}
+
+.risk-pyramid i:nth-child(2) {
+  width: 64px;
+}
+
+.risk-pyramid i:nth-child(3) {
+  width: 104px;
+}
+
+.risk-pyramid strong {
+  width: 168px;
+  clip-path: polygon(18% 0, 82% 0, 100% 100%, 0 100%);
+  color: #ffffff;
+  background: #10b981;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.credit-risk-panel p {
+  margin: 8px 0 0;
+  color: #374151;
+  font-size: 13px;
+  text-align: center;
+}
+
+.pptx-template-text {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-word;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  line-height: 1.16;
+}
+
+.pptx-template-text span {
+  display: block;
+}
+
+.pptx-template-shape {
+  pointer-events: none;
+}
+
+.scheme3-workspace .ppt-slide-footer {
+  margin-top: 8px;
+}
+
+.scheme3-workspace .ppt-preview-head {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 42px;
+  padding: 0;
+}
+
+.scheme3-workspace .ppt-preview-title {
+  padding-right: 96px;
+  line-height: 1.5;
+}
+
+.scheme3-workspace .ppt-preview-zoom-controls {
+  justify-self: start;
+  max-width: 100%;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.scheme3-workspace .ppt-preview-zoom-controls input {
+  width: 72px;
+}
+
+.scheme3-workspace .ppt-completion-module {
+  right: 10px;
+  padding: 5px 9px 5px 6px;
+}
+
+.scheme3-workspace .ppt-completion-donut {
+  width: 34px;
+  height: 34px;
+}
+
+.scheme3-workspace .sentinel-module {
+  grid-template-columns: 126px minmax(0, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.scheme3-workspace .sentinel-issues {
+  /*
+   * TRACE[PPT-LAYOUT-043]: scheme3 瘦身模式也不能限制提醒列表高度。
+   * 列表最多由 JS 输出 3 条，直接完整展示比内部滚动更稳定。
+   */
+  max-height: none;
+  overflow: visible;
+}
+
+.scheme3-workspace .actions {
+  margin-top: 18px;
+  align-self: start;
+}
+
+.scheme3-insight .phase-card {
+  padding: 18px;
+}
+
+.scheme3-insight .draft-document {
+  min-height: 260px;
+}
+
+.scheme3-insight .output-list {
+  margin-top: 0;
+}
+
+.scheme3-insight .output-item,
+.scheme3-insight .ai-summary-module {
+  margin-top: 0;
+  box-shadow: none;
+}
+
+.scheme3-insight .output-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+}
+
+.scheme3-insight .output-item .file-link {
+  width: 100%;
+}
+
+.scheme3-insight .ai-summary-module {
+  padding: 16px;
+  overflow: hidden;
+}
+
+.scheme3-insight .summary-head {
+  align-items: flex-start;
+}
+
+.scheme3-insight .summary-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.scheme3-insight .summary-card,
+.scheme3-insight .summary-card.wide {
+  min-width: 0;
+  grid-column: auto;
+}
+
+.scheme3-insight .summary-card.center {
+  min-height: 126px;
+}
+
+.scheme3-insight .summary-card strong,
+.scheme3-insight .summary-card p {
+  writing-mode: horizontal-tb;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+.scheme3-insight .summary-donut {
+  width: 86px;
+  height: 86px;
+}
+
+.ai-summary-module {
+  border: 1px solid transparent;
+  border-radius: 18px;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, #ffffff 0%, #f7f8ff 100%) padding-box,
+    linear-gradient(135deg, rgba(123, 114, 255, 0.32), rgba(88, 188, 255, 0.22)) border-box;
+  box-shadow: 0 12px 30px rgba(58, 64, 99, 0.06);
+  animation: softRiseIn 260ms ease-out both;
+}
+
+.summary-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.summary-head span,
+.summary-head small {
+  color: #8d96aa;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.summary-head h3 {
+  margin: 2px 0 0;
+  color: #1f2738;
+  font-size: 18px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+.summary-card {
+  border: 1px solid #e4eaf7;
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.summary-card.center {
+  display: grid;
+  place-items: center;
+}
+
+.summary-card strong {
+  display: block;
+  color: #20283a;
+}
+
+.summary-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b5568;
+  font-weight: 600;
+}
+
+.summary-card.wide {
+  grid-column: 1 / -1;
+}
+
+.summary-donut {
+  display: grid;
+  place-items: center;
+  width: 107px;
+  height: 107px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #ffffff 0 55%, transparent 56%),
+    conic-gradient(#7774f6 calc(var(--score) * 1%), #e7ebf7 0);
+}
+
+.summary-donut strong {
+  font-size: 15px;
+  line-height: 1;
+}
+
+.summary-donut span {
+  color: #8d96aa;
+  font-size: 12px;
+}
+
+.summary-lines {
+  display: grid;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.summary-lines span {
+  display: block;
+  height: 9px;
+  border-radius: 999px;
+  background: #e7ecf4;
+}
+
+.summary-lines span:nth-child(2) {
+  width: 86%;
+}
+
+.summary-lines span:nth-child(3) {
+  width: 72%;
+}
+
+.summary-lines span:nth-child(4) {
+  width: 58%;
+}
+
+.circle-metrics {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.circle-metrics i {
+  display: block;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at center, #ffffff 0 58%, transparent 59%),
+    conic-gradient(#9b98ff calc(var(--score) * 1%), #e8ecf7 0);
+}
+
+.mini-bars {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.mini-bars label {
+  display: grid;
+  gap: 5px;
+  color: #6f7890;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.mini-bars i {
+  display: block;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7774f6 var(--w), #e8ecf7 var(--w));
+}
+
+.mini-bars.clean {
+  margin-top: 14px;
+}
+
+.mini-bars.clean i {
+  height: 10px;
+}
+
+.metric-row {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metric-row div {
+  border-radius: 14px;
+  padding: 10px;
+  background: #f5f7ff;
+}
+
+.metric-row span {
+  display: block;
+  color: #8d96aa;
+  font-size: 12px;
+}
+
+.metric-row strong {
+  margin-top: 4px;
+  color: #7774f6;
+  font-size: 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+@media (max-width: 1180px) {
+  .scheme-three-desktop {
+    min-width: 0;
+  }
+
+  .scheme3-shell {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .scheme3-side,
+  .scheme3-insight {
+    min-height: auto;
+  }
+
+  .scheme3-topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ppt-review-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .ppt-edit-panel,
+  .ppt-preview-panel {
+    height: auto;
+  }
+
+  .ppt-field-list {
+    max-height: 520px;
+  }
+
+  .ppt-preview-monitor {
+    display: block;
+  }
+
+  .sentinel-module {
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "head"
+      "checks"
+      "issues";
+  }
+
+  .chat-shell,
+  .workspace-grid,
+  .wide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mini-metrics,
+  .grid-3,
+  .stepper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .left-rail {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .main-area {
+    padding: 16px;
+  }
+
+  .topline,
+  .output-item {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .form-grid,
+  .grid-2,
+  .mini-metrics,
+  .page-strip,
+  .field-list,
+  .ppt-coverage-strip,
+  .draft-section-map,
+  .summary-grid,
+  .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+
+  .ppt-field-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* One quiet, page-specific upload hint outside the report canvas. */
+.ppt-page-file-tip {
+  margin: 2px 0 12px;
+  color: #8a94a6;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.ppt-report-ai-button { margin: 4px 0 12px; padding: 8px 14px; border: 1px solid #786cff; border-radius: 8px; background: #f5f3ff; color: #6755df; cursor: pointer; }
+.ppt-report-ai-button:disabled { opacity: .6; cursor: wait; }
+.ppt-edit-panel:has(.ppt-report-ai-button),
+.scheme3-workspace .ppt-edit-panel:has(.ppt-report-ai-button) {
+  grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+}
+.ppt-report-ai-button {
+  align-self: start;
+  justify-self: start;
+  min-height: 40px;
+}
+
+/* Page 7: three investigation inputs and a fixed-size PPT preview canvas. */
+.ppt-acquisition-edit-panel,
+.scheme3-workspace .ppt-acquisition-edit-panel,
+.scheme3-workspace .ppt-acquisition-edit-panel:has(.ppt-report-ai-button) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ppt-acquisition-edit-panel .ppt-field-list { flex: 1; min-height: 0; overflow-y: auto; }
+.ppt-acquisition-edit-panel .ppt-confirm { flex: none; min-height: 40px; margin-top: 0; }
+.ppt-acquisition-actions { flex: none; }
+.ppt-acquisition-actions p { margin: 0 0 6px; font-size: 12px; line-height: 1.6; }
+.ppt-acquisition-edit-panel textarea { min-height: 94px; resize: vertical; }
+.ppt-template-instruction-page { position: absolute; inset: 65px 54px 48px; font-size: 17px; line-height: 1.65; overflow-wrap: anywhere; }
+.ppt-template-instruction-page h3 { font-size: 23px; line-height: 1.45; margin: 0 0 24px; font-weight: 500; }
+.ppt-template-instruction-page p { margin: 0 0 12px; }
+.ppt-template-instruction-page ol { margin: 0; padding-left: 1.5em; }
+.ppt-template-instruction-page li { margin: 0 0 16px; white-space: pre-wrap; }
+
+/* Finance actions and feedback must not consume the scrolling field row. */
+.ppt-finance-edit-panel,
+.scheme3-workspace .ppt-finance-edit-panel,
+.scheme3-workspace .ppt-finance-edit-panel:has(.ppt-report-ai-button) {
+  display: flex;
+  flex-direction: column;
+}
+.ppt-finance-edit-panel > :not(.ppt-field-list) { flex: none; }
+.ppt-finance-edit-panel .ppt-field-list { flex: 1; min-height: 120px; overflow-y: auto; }
+.ppt-finance-edit-panel .ppt-report-ai-button { margin: 0; }
+.ppt-finance-edit-panel .ppt-confirm { min-height: 40px; margin-top: 0; }
+
+/* PM lookup keeps the action beside the existing grid-status field. */
+.ppt-prior-grid-value, .ppt-prior-grid-search { display: flex; gap: 8px; align-items: center; }
+.ppt-prior-grid-value input, .ppt-prior-grid-search input { flex: 1; min-width: 0; width: 0; }
+.ppt-prior-grid-control { min-width: 0; }
+.ppt-prior-grid-control .ppt-report-ai-button { margin: 0; flex: none; white-space: nowrap; padding: 7px 10px; }
+.ppt-prior-grid-picker { margin-top: 10px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; font-size: 12px; }
+.ppt-prior-grid-picker > label { display: grid; gap: 6px; }
+.ppt-prior-grid-picker select { width: 100%; border-radius: 6px; padding: 6px; }
+.ppt-prior-grid-search { margin-top: 8px; }
+.ppt-prior-grid-candidates { max-height: 180px; overflow: auto; margin: 8px 0; }
+.ppt-prior-grid-candidates label { display: flex; align-items: flex-start; gap: 6px; padding: 5px 0; }
+.ppt-prior-grid-candidates input { width: 14px; flex: none; margin-top: 3px; }
+.ppt-field-row .ppt-prior-grid-candidates span { display: block; font-size: 12px; font-weight: 400; overflow-wrap: anywhere; }
+.ppt-prior-grid-picker small { display: block; margin-bottom: 8px; }
+.ppt-prior-grid-picker p { margin: 8px 0; overflow-wrap: anywhere; }
+
+/* Automated prior-project gate sits above the complete page-12 field group. */
+.ppt-prior-gate { border: 1px solid var(--line); border-radius: 10px; padding: 12px; margin: 10px 0 14px; font-size: 12px; }
+.ppt-prior-gate-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.ppt-prior-gate-heading b { color: var(--primary); }
+.ppt-prior-gate .ppt-report-ai-button { margin: 5px 5px 5px 0; padding: 7px 10px; white-space: nowrap; }
+.ppt-prior-gate p { margin: 7px 0; line-height: 1.6; }
+.ppt-prior-gate small { display: block; line-height: 1.6; }
+.ppt-prior-gate .ppt-prior-grid-candidates { max-height: 260px; }
+.ppt-prior-gate .ppt-prior-grid-candidates label { border-bottom: 1px solid var(--line); padding: 8px 0; }
+.ppt-prior-gate .ppt-prior-grid-candidates span { min-width: 0; overflow-wrap: anywhere; }
+.ppt-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.ppt-fieldset:disabled { opacity: .55; }
+.ppt-prior-grid-value .ppt-report-ai-button { margin: 0; padding: 7px 10px; white-space: nowrap; }

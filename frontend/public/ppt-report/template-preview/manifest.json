@@ -1,0 +1,6172 @@
+{
+  "version": 1,
+  "trace": "TRACE[PPT-CHAT-008]",
+  "source": "分布式光伏风控报告模板-202512.pptx",
+  "slideSize": {
+    "emu": {
+      "cx": 12192000,
+      "cy": 6858000
+    },
+    "px": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "mediaMimeTypes": {
+    "image1.png": "image/png",
+    "image10.png": "image/png",
+    "image11.jpg": "image/jpeg",
+    "image12.jpg": "image/jpeg",
+    "image2.png": "image/png",
+    "image3.png": "image/png",
+    "image4.jpg": "image/jpeg",
+    "image5.png": "image/png",
+    "image6.png": "image/png",
+    "image7.png": "image/png",
+    "image8.png": "image/png",
+    "image9.png": "image/png"
+  },
+  "slides": [
+    {
+      "slideNo": 1,
+      "id": "slide01",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 0.053,
+            "y": 0.03,
+            "w": 1279.894,
+            "h": 719.94
+          },
+          "src": "media/image1.png"
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "4",
+            "name": "图片 3"
+          },
+          "rect": {
+            "x": 0.053,
+            "y": 0.03,
+            "w": 1279.894,
+            "h": 719.94
+          },
+          "src": "media/image1.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4",
+            "descr": "7b0a20202020227461726765744d6f64756c65223a202270726f636573734f6e6c696e65466f6e7473220a7d0a"
+          },
+          "rect": {
+            "x": -0.012,
+            "y": 238.453,
+            "w": 880.694,
+            "h": 173.902
+          },
+          "text": "XXX分布式光伏项目\n风险报告",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 48.0,
+              "bold": true,
+              "color": null,
+              "align": "ctr",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 52.067,
+            "y": 655.533,
+            "w": 887.0,
+            "h": 38.667
+          },
+          "text": "/2025年X月                /项目风控部               /XXX",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 2,
+      "id": "slide02",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -3.667,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "目录",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "Rectangle 7"
+          },
+          "rect": {
+            "x": 491.056,
+            "y": 91.138,
+            "w": 297.887,
+            "h": 467.221
+          },
+          "text": "项目基本概况\n经营能力分析\n项目实施方案\n项目收益测算\n项目评审意见\n附           录",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 37.333,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "7",
+            "name": "椭圆 6"
+          },
+          "rect": {
+            "x": 447.019,
+            "y": 130.674,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E50012",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "8",
+            "name": "椭圆 7"
+          },
+          "rect": {
+            "x": 447.019,
+            "y": 207.341,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E0AB00",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "9",
+            "name": "椭圆 8"
+          },
+          "rect": {
+            "x": 447.019,
+            "y": 282.008,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E50012",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "10",
+            "name": "椭圆 9"
+          },
+          "rect": {
+            "x": 447.019,
+            "y": 356.674,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E0AB00",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "11",
+            "name": "椭圆 10"
+          },
+          "rect": {
+            "x": 447.019,
+            "y": 129.341,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E50012",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "12",
+            "name": "椭圆 11"
+          },
+          "rect": {
+            "x": 447.019,
+            "y": 206.008,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E0AB00",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "13",
+            "name": "椭圆 12"
+          },
+          "rect": {
+            "x": 447.019,
+            "y": 280.674,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E50012",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "14",
+            "name": "椭圆 13"
+          },
+          "rect": {
+            "x": 447.019,
+            "y": 355.341,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E0AB00",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "15",
+            "name": "椭圆 14"
+          },
+          "rect": {
+            "x": 448.25,
+            "y": 430.521,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E50012",
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "16",
+            "name": "椭圆 15"
+          },
+          "rect": {
+            "x": 449.173,
+            "y": 507.956,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E0AB00",
+            "line": null,
+            "text": null
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 3,
+      "id": "slide03",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "41",
+            "name": "矩形: 圆角 40"
+          },
+          "rect": {
+            "x": 97.334,
+            "y": 62.44,
+            "w": 350.086,
+            "h": 592.435
+          },
+          "text": "",
+          "geometry": "roundRect",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目基本概况",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 575.717,
+            "y": 2.688,
+            "w": 384.399,
+            "h": 38.775
+          },
+          "text": "项目基本概况-项目基本面",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "文本框 5"
+          },
+          "rect": {
+            "x": 112.466,
+            "y": 65.124,
+            "w": 336.706,
+            "h": 546.485
+          },
+          "text": "项目名称：XXX分布式光伏项目\n项目编号：ZNE-2024-XXX\n项目自评分：XX\n业务部：业务X部\n项目经理：XXX\n项目类型：屋顶分布式光伏\n项目规模（MW）：XX\n开发方式：开发/投标\n运营年限（年）：XX\n预算总投资（万元）：XX\n全投资税后IRR：XX%\n项目里程碑：商务合同签订、备案已完成、电网接入意见批复正在办理等",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 983.547,
+            "y": 74.151,
+            "w": 288.276,
+            "h": 197.51
+          },
+          "text": "项目公司名称：XX有限公司\n注册资本金（万元）：XX\n法人代表：XX\n股东名称及持股比例：\nXX有限公司（100%）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "12",
+            "name": "文本框 11"
+          },
+          "rect": {
+            "x": 871.666,
+            "y": 105.339,
+            "w": 71.306,
+            "h": 148.281
+          },
+          "text": "04\n项目公司",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": true,
+              "color": "#E0AB00",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "17",
+            "name": "文本框 16"
+          },
+          "rect": {
+            "x": 12.745,
+            "y": 270.521,
+            "w": 74.887,
+            "h": 148.281
+          },
+          "text": "01\n项目概要",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": true,
+              "color": "#E0AB00",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "19",
+            "name": "文本框 18"
+          },
+          "rect": {
+            "x": 976.298,
+            "y": 394.544,
+            "w": 311.89,
+            "h": 197.51
+          },
+          "text": "产权方名称：XX有限公司\n屋顶类型：彩钢瓦/混凝土\n租赁面积：XX㎡\n租赁金额：XX元\n抵押情况：XX",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "21",
+            "name": "文本框 20"
+          },
+          "rect": {
+            "x": 869.075,
+            "y": 426.827,
+            "w": 71.308,
+            "h": 148.281
+          },
+          "text": "05\n屋顶情况",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": true,
+              "color": "#E0AB00",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "26",
+            "name": "文本框 25"
+          },
+          "rect": {
+            "x": 559.043,
+            "y": 68.169,
+            "w": 310.032,
+            "h": 275.06
+          },
+          "text": "消纳比例：XX%\n脱硫标杆电价：XX元/kWh\n电价折扣：XX%/固定电价\n企业用电电价：XX元/kWh\n接入电压等级（kV）：低压/高压\n变压器容量（kVA）：XX",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "28",
+            "name": "文本框 27"
+          },
+          "rect": {
+            "x": 462.552,
+            "y": 106.869,
+            "w": 71.308,
+            "h": 201.596
+          },
+          "text": "02 \n消纳、电价、接入",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": true,
+              "color": "#E0AB00",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "33",
+            "name": "文本框 32"
+          },
+          "rect": {
+            "x": 564.665,
+            "y": 399.382,
+            "w": 296.953,
+            "h": 163.582
+          },
+          "text": "用电企业名称：XX\n用电企业性质：XX\n注册资本金（万元）：XX\n所处行业：XX",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "35",
+            "name": "文本框 34"
+          },
+          "rect": {
+            "x": 461.935,
+            "y": 421.11,
+            "w": 103.874,
+            "h": 157.975
+          },
+          "text": "03 \n用电方信息",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": true,
+              "color": "#E0AB00",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 779.691,
+            "y": 625.372,
+            "w": 296.953,
+            "h": 67.856
+          },
+          "text": "大部分时间有，部分时间没有",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 4,
+      "id": "slide04",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": -2.093,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "经营能力分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 567.293,
+            "y": 0.0,
+            "w": 582.04,
+            "h": 38.775
+          },
+          "text": "经营能力分析-项目评分及企业资信",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": 103.345,
+            "w": 455.927,
+            "h": 395.471
+          },
+          "text": "项目评分表得分：XX分\n主要失分点：如企业经营情况\n评分表详见附录\n企查查风险事项明细\n股权质押情况：无\n被执行记录：无\n动产抵押情况：无\n纳税信用等级：A级",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": "#E0AB00",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "3",
+            "name": "文本框 2"
+          },
+          "rect": {
+            "x": 93.362,
+            "y": 526.813,
+            "w": 455.606,
+            "h": 38.775
+          },
+          "text": "（如有其他风险事项，可截图补充展示）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "5",
+            "name": "图片 4",
+            "descr": "图表, 漏斗图\n\nAI 生成的内容可能不正确。"
+          },
+          "rect": {
+            "x": 706.143,
+            "y": 98.513,
+            "w": 473.143,
+            "h": 405.136
+          },
+          "src": "media/image4.jpg"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "文本框 5"
+          },
+          "rect": {
+            "x": 973.042,
+            "y": 142.844,
+            "w": 189.028,
+            "h": 38.775
+          },
+          "text": "（企查查截图）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 490.252,
+            "y": 249.786,
+            "w": 137.867,
+            "h": 38.775
+          },
+          "text": "这一块是AI",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 5,
+      "id": "slide05",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": -2.093,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "经营能力分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.293,
+            "y": 0.0,
+            "w": 582.04,
+            "h": 38.775
+          },
+          "text": "经营能力分析-光伏风控细则条件判定",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 150.857,
+            "y": 82.327,
+            "w": 640.0,
+            "h": 38.775
+          },
+          "text": "风控细则条件判定",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 186.286,
+            "y": 121.102,
+            "w": 640.0,
+            "h": 35.544
+          },
+          "text": "该项目不属于以下限制条件",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "14",
+            "name": "文本框 13"
+          },
+          "rect": {
+            "x": 158.476,
+            "y": 542.979,
+            "w": 990.857,
+            "h": 73.551
+          },
+          "text": "*符合其中任意1-3条(含)时，原则上项目收益率要求须在基准收益率(7.7%)的基础上增加0.5%；超过3条时原则上不建议项目继续推进。",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 18.667,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 506.286,
+            "y": 111.923,
+            "w": 310.2,
+            "h": 38.775
+          },
+          "text": "部分自己填、部分能做的做",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 6,
+      "id": "slide06",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": -2.093,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目基本概况",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 384.399,
+            "h": 38.775
+          },
+          "text": "项目基本概况-项目特殊事项说明",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": 80.32,
+            "w": 1024.926,
+            "h": 222.667
+          },
+          "text": "（如项目涉及特殊情况，请补充说明）\n例如：\n1、已存在前序项目，如一期项目经营生产情况；\n2、项目产权、EMC协议经营期限不满25年需说明；\n3、项目其他问题等",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 7,
+      "id": "slide07",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": -2.093,
+            "w": 417.832,
+            "h": 38.667
+          },
+          "text": "经营能力分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 477.015,
+            "h": 38.775
+          },
+          "text": "经营能力分析-用电方介绍",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "Rectangle 45"
+          },
+          "rect": {
+            "x": 111.953,
+            "y": 283.632,
+            "w": 568.274,
+            "h": 35.544
+          },
+          "text": "03 主要客户",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "12",
+            "name": "文本框 11"
+          },
+          "rect": {
+            "x": 112.176,
+            "y": 306.403,
+            "w": 693.625,
+            "h": 42.41
+          },
+          "text": "国内产品主要销往XXX，占比60-70%……",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "16",
+            "name": "Rectangle 48"
+          },
+          "rect": {
+            "x": 115.68,
+            "y": 141.018,
+            "w": 630.125,
+            "h": 35.544
+          },
+          "text": "02 产线及产能",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "15",
+            "name": "文本框 14"
+          },
+          "rect": {
+            "x": 114.152,
+            "y": 162.708,
+            "w": 693.848,
+            "h": 48.469
+          },
+          "text": "年生产能力XX万吨……",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": false,
+              "color": "#000000",
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "20",
+            "name": "文本框 19"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": 50.352,
+            "w": 525.942,
+            "h": 35.544
+          },
+          "text": "01 用电企业名称",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "21",
+            "name": "文本框 20"
+          },
+          "rect": {
+            "x": 121.465,
+            "y": 78.329,
+            "w": 522.406,
+            "h": 43.905
+          },
+          "text": "XX限公司",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "38",
+            "name": "Rectangle 42"
+          },
+          "rect": {
+            "x": 114.152,
+            "y": 600.84,
+            "w": 759.779,
+            "h": 70.051
+          },
+          "text": "05 其他事项（如有）\n\n.",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "39",
+            "name": "文本框 38"
+          },
+          "rect": {
+            "x": 114.491,
+            "y": 631.391,
+            "w": 1075.332,
+            "h": 43.905
+          },
+          "text": "是否涉及特许经营权，以及特许经营权有效期限，是否有屋顶漏水情况……",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "24",
+            "name": "Rectangle 42"
+          },
+          "rect": {
+            "x": 114.152,
+            "y": 465.917,
+            "w": 733.424,
+            "h": 53.895
+          },
+          "text": "04 工作模式",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": true,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "25",
+            "name": "文本框 24"
+          },
+          "rect": {
+            "x": 114.152,
+            "y": 502.558,
+            "w": 1038.031,
+            "h": 42.41
+          },
+          "text": "公司现有员工约XXX人，工作模式为两班倒……",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "22",
+            "name": "矩形 21"
+          },
+          "rect": {
+            "x": 824.109,
+            "y": 69.327,
+            "w": 440.4,
+            "h": 38.667
+          },
+          "text": "（企业股权结构-股东情况、股权关系）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "3",
+            "name": "文本框 2"
+          },
+          "rect": {
+            "x": 808.0,
+            "y": 243.262,
+            "w": 191.048,
+            "h": 38.775
+          },
+          "text": "能给1，2-5手填",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 8,
+      "id": "slide08",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": -2.093,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "经营能力分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 384.399,
+            "h": 38.775
+          },
+          "text": "经营能力分析-财务分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 70.14,
+            "y": 412.467,
+            "w": 1175.665,
+            "h": 266.289
+          },
+          "text": "(财务状况简要分析）\n如：企业近三年净利润保持上涨趋势，2022年净利润3000万元，较2021年同比上涨80%。净利率上涨1%，至8.31%。企业近三年企业资产负债率均处于较低水平，2022年为33%。流动比例较为平稳，2022年为1.95。\n应收账款占流动资产比例逐年下降，由2020年31%下降至2022年21%。2022年应收账款周转率为13，应收账款周转正常。\n总体财务情况较好，财务风险可控。",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 700.665,
+            "y": 621.67,
+            "w": 552.544,
+            "h": 38.775
+          },
+          "text": "上市公司能直接抓，没上市的会给数据（多选项）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 9,
+      "id": "slide09",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": -2.093,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "经营能力分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.293,
+            "y": 0.0,
+            "w": 540.774,
+            "h": 38.775
+          },
+          "text": "经营能力分析-行业研究",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "矩形 5"
+          },
+          "rect": {
+            "x": 92.596,
+            "y": 66.775,
+            "w": 702.07,
+            "h": 526.694
+          },
+          "text": "（用电方所在行业，以下内容为举例）\n1、行业概览\n预应力混凝土钢绞线常用于建筑行业加固混凝土结构，由高强度钢丝绞合在一起形成股线制成。\n应用场景以基础设施为主：高速公路、高速铁路、城市桥梁、公共建筑、水利设施等在中国大陆产生了全球最大的钢绞线需求，其中高速铁路、高速公路需求占钢绞线总产量的70%~80%。\n\n2、市场规模\n 市场需求缓慢回升：2023年前三季度国内基础设施建设的放缓对钢绞线市场产生负面影响，城市化和交通基础设施建设方面的投资乏力也使钢绞线的需求放缓。就铁路建设方面，铁路方面投资仍有2500多亿的投资规模需要落地，带动钢绞线市场的需求量，四季度的需求比三季度有所回升。\n\n3、行业特征\n价格走势震荡：2023年一季度市场价格呈现小幅上涨，二季度的价格走势也呈现惯性下滑的态势，直至6月利好政策的频出及预期的加强，钢绞线价格止跌企稳，延续到三季度末整体价格偏震荡运行。\n\n4、企业画像",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "9",
+            "name": "图片 8"
+          },
+          "rect": {
+            "x": 811.058,
+            "y": 84.639,
+            "w": 452.725,
+            "h": 275.361
+          },
+          "src": "media/image5.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 479.316,
+            "y": 71.595,
+            "w": 331.742,
+            "h": 38.775
+          },
+          "text": "AI简单概括，给人工改的空间",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 10,
+      "id": "slide10",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 121.279,
+            "y": -3.209,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目实施方案",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.293,
+            "y": 0.0,
+            "w": 540.973,
+            "h": 38.775
+          },
+          "text": "项目实施方案-业主踏勘情况",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "文本框 5"
+          },
+          "rect": {
+            "x": 417.285,
+            "y": 69.324,
+            "w": 708.477,
+            "h": 61.394
+          },
+          "text": "（插入厂房屋顶踏勘照片：如整体俯视图、屋顶内部结构、彩钢瓦细节图、厂区道路图、生产车间/产线图、周边遮挡照片等）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 37.209,
+            "y": 141.614,
+            "w": 322.327,
+            "h": 208.698
+          },
+          "text": "屋顶产权方：\n产权剩余年限（年）：\n厂房已使用年限（年）：\n屋顶荷载：是否需要加固",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 21.333,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "10",
+            "name": "图片 9"
+          },
+          "rect": {
+            "x": 374.371,
+            "y": 141.377,
+            "w": 382.318,
+            "h": 244.727
+          },
+          "src": "media/image6.png"
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "12",
+            "name": "图片 11"
+          },
+          "rect": {
+            "x": 786.358,
+            "y": 390.301,
+            "w": 382.318,
+            "h": 259.35
+          },
+          "src": "media/image7.png"
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "14",
+            "name": "图片 13"
+          },
+          "rect": {
+            "x": 786.358,
+            "y": 138.205,
+            "w": 382.318,
+            "h": 248.908
+          },
+          "src": "media/image8.png"
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "16",
+            "name": "图片 15"
+          },
+          "rect": {
+            "x": 374.371,
+            "y": 390.301,
+            "w": 385.169,
+            "h": 259.35
+          },
+          "src": "media/image9.png"
+        }
+      ]
+    },
+    {
+      "slideNo": 11,
+      "id": "slide11",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 116.145,
+            "y": -6.259,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目实施方案",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 384.399,
+            "h": 38.775
+          },
+          "text": "项目实施方案-消纳及电价分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 140.831,
+            "y": 79.661,
+            "w": 459.727,
+            "h": 38.775
+          },
+          "text": "消纳及电力接入情况",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 141.402,
+            "y": 263.472,
+            "w": 248.666,
+            "h": 38.775
+          },
+          "text": "电 价 情 况",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#BF9000",
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "10",
+            "name": "文本框 9"
+          },
+          "rect": {
+            "x": 162.165,
+            "y": 299.401,
+            "w": 976.433,
+            "h": 140.559
+          },
+          "text": "本地脱硫标杆电价:XX元/kWh\n折扣:XX%\n上年度平均电价:峰、平、谷（元/kWh）\n折前电价:XXXX元/kWh\n折后电价:XXX元/kWh",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "11",
+            "name": "文本框 10"
+          },
+          "rect": {
+            "x": 162.165,
+            "y": 108.956,
+            "w": 438.393,
+            "h": 173.727
+          },
+          "text": "年用电量（万度）:XXX万度\n自发自用比例:XX%",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "12",
+            "name": "流程图: 接点 11"
+          },
+          "rect": {
+            "x": 111.141,
+            "y": 86.0,
+            "w": 25.855,
+            "h": 25.989
+          },
+          "text": "",
+          "geometry": "flowChartConnector",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 6.0
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "13",
+            "name": "流程图: 接点 12"
+          },
+          "rect": {
+            "x": 111.141,
+            "y": 273.412,
+            "w": 25.855,
+            "h": 25.989
+          },
+          "text": "",
+          "geometry": "flowChartConnector",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 6.0
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "15",
+            "name": "文本框 14"
+          },
+          "rect": {
+            "x": 718.109,
+            "y": 99.686,
+            "w": 438.393,
+            "h": 175.41
+          },
+          "text": "逆变器形式：组串式/集中式\n变压器容量：",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 1070.913,
+            "y": 275.095,
+            "w": 166.645,
+            "h": 38.775
+          },
+          "text": "都在oa或能抓",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 12,
+      "id": "slide12",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": -2.093,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目实施方案",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.293,
+            "y": 0.0,
+            "w": 543.275,
+            "h": 38.775
+          },
+          "text": "项目实施方案-支持政策说明（如有）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "文本框 5"
+          },
+          "rect": {
+            "x": 101.333,
+            "y": 100.0,
+            "w": 1148.709,
+            "h": 228.308
+          },
+          "text": "项目所在地光伏项目支持政策：\n1）发文时间；\n2）发文机构；\n3）政策有效期；\n4）主要条款",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 26.667,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 675.688,
+            "y": 194.767,
+            "w": 210.57,
+            "h": 38.775
+          },
+          "text": "试试AI，不一定准",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 13,
+      "id": "slide13",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 692.706,
+            "h": 38.775
+          },
+          "text": "收益测算-主要边界条件",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目收益测算",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 96.995,
+            "y": 50.075,
+            "w": 870.462,
+            "h": 38.775
+          },
+          "text": "根据实际测算数据填写，以下均为举例 OA，多种类型不一样，需要多种模板",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 14,
+      "id": "slide14",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 692.706,
+            "h": 38.775
+          },
+          "text": "收益测算-敏感性分析（消纳比例、单位成本）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目收益测算",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 327.821,
+            "y": 100.244,
+            "w": 667.152,
+            "h": 38.775
+          },
+          "text": "自发自用比例（以测算值为基准，上下以10%为间隔浮动）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 19.529,
+            "y": 253.369,
+            "w": 56.465,
+            "h": 213.262
+          },
+          "text": "单位成本（元/瓦）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 97.395,
+            "y": 47.832,
+            "w": 460.852,
+            "h": 38.775
+          },
+          "text": "全投资收益率双因素敏感性分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "10",
+            "name": "文本框 9"
+          },
+          "rect": {
+            "x": 838.05,
+            "y": 139.019,
+            "w": 407.849,
+            "h": 397.154
+          },
+          "text": "此项目光伏项目容量XXMW，自发自用比例为XX%，以项目总投入为XX元/W，IRR为XX%\n1.如总投入降低0.2元/W时，IRR为XX%；\n2.如总投入增加0.2元/W时，IRR为XX%；\n3.若自发自用比例降低10%时，IRR为XX%。",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "11",
+            "name": "文本框 10"
+          },
+          "rect": {
+            "x": 8.305,
+            "y": 473.379,
+            "w": 178.18,
+            "h": 126.019
+          },
+          "text": "（以测算值为基准，上下以0.1元/瓦为间隔浮动）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 529.398,
+            "y": 62.447,
+            "w": 407.138,
+            "h": 38.775
+          },
+          "text": "做一个测算表，边界条件设定后生成",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 15,
+      "id": "slide15",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "4",
+            "name": "Rectangle 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": 44.532,
+            "w": 1112.362,
+            "h": 634.275
+          },
+          "text": "",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 692.706,
+            "h": 38.775
+          },
+          "text": "收益测算-敏感性分析（结算电价、单位成本）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "文本框 5"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目收益测算",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 367.842,
+            "y": 103.158,
+            "w": 710.067,
+            "h": 38.775
+          },
+          "text": "结算电价（以合同签署价为基准，上下以0.02元/度为间隔浮动）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 25.23,
+            "y": 288.314,
+            "w": 56.465,
+            "h": 213.262
+          },
+          "text": "单位成本（元/瓦）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "10",
+            "name": "文本框 9"
+          },
+          "rect": {
+            "x": 97.395,
+            "y": 47.832,
+            "w": 460.852,
+            "h": 38.775
+          },
+          "text": "全投资收益率双因素敏感性分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "11",
+            "name": "文本框 10"
+          },
+          "rect": {
+            "x": 838.05,
+            "y": 139.019,
+            "w": 386.508,
+            "h": 353.532
+          },
+          "text": "此项目光伏项目容量XXMW，结算单价XXXX元/度，以项目总投入为XXX元/W，IRR为XXX%\n1、如电价下降5 分，IRR 为XXX%；\n2、如电价上涨5 分，IRR 为XXX%；\n3、如果电站正常拆除，拆装费XXX万元，全投资IRR下降为XXX% ；",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "12",
+            "name": "文本框 11"
+          },
+          "rect": {
+            "x": 8.305,
+            "y": 473.379,
+            "w": 178.18,
+            "h": 126.019
+          },
+          "text": "（以测算值为基准，上下以0.1元/瓦为间隔浮动）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 16,
+      "id": "slide16",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 692.706,
+            "h": 38.775
+          },
+          "text": "收益测算-敏感性分析（收益率、单位成本）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "文本框 5"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目收益测算",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 367.842,
+            "y": 103.158,
+            "w": 130.798,
+            "h": 38.775
+          },
+          "text": "全投资IRR",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 25.23,
+            "y": 288.314,
+            "w": 56.465,
+            "h": 213.262
+          },
+          "text": "单位成本（元/瓦）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "10",
+            "name": "文本框 9"
+          },
+          "rect": {
+            "x": 97.395,
+            "y": 47.832,
+            "w": 1162.605,
+            "h": 38.775
+          },
+          "text": "消纳比例-双因素敏感性分析（如用电企业经营状况不明、厂房在建、财务状况不良，需填写本页内容）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "11",
+            "name": "文本框 10"
+          },
+          "rect": {
+            "x": 827.993,
+            "y": 141.933,
+            "w": 386.508,
+            "h": 397.154
+          },
+          "text": "此项目光伏项目容量20MW，结算单价XXX元/度，以项目总投入为XXX元/W，消纳比例XX%，IRR为XXX%\n1、如需达到全投资IRR 为XXX%，消纳比例需到XXX%；\n2、如需达到全投资IRR 为XXX%，消纳比例需到XXX%。",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "12",
+            "name": "文本框 11"
+          },
+          "rect": {
+            "x": 478.203,
+            "y": 103.158,
+            "w": 627.312,
+            "h": 38.775
+          },
+          "text": "（以测算值为基准，上下以0.25%为间隔浮动）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "13",
+            "name": "文本框 12"
+          },
+          "rect": {
+            "x": 24.305,
+            "y": 489.379,
+            "w": 178.18,
+            "h": 126.019
+          },
+          "text": "（以测算值为基准，上下以0.1元/瓦为间隔浮动）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 17,
+      "id": "slide17",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 692.706,
+            "h": 38.775
+          },
+          "text": "项目测算分析-敏感性分析（如有其他事项）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目收益测算",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "文本框 5"
+          },
+          "rect": {
+            "x": 149.333,
+            "y": 97.333,
+            "w": 862.667,
+            "h": 38.775
+          },
+          "text": "（针对其他对项目影响较大的边界条件进行的敏感性分析，如保发条款）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 585.32,
+            "y": 275.883,
+            "w": 189.028,
+            "h": 38.775
+          },
+          "text": "特殊情况人工填",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 18,
+      "id": "slide18",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目评审意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 452.706,
+            "h": 38.775
+          },
+          "text": "评审意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "9",
+            "name": "流程图: 接点 8"
+          },
+          "rect": {
+            "x": 99.627,
+            "y": 85.925,
+            "w": 25.855,
+            "h": 25.989
+          },
+          "text": "",
+          "geometry": "flowChartConnector",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 6.0
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "10",
+            "name": "流程图: 接点 9"
+          },
+          "rect": {
+            "x": 103.228,
+            "y": 204.891,
+            "w": 25.855,
+            "h": 25.989
+          },
+          "text": "",
+          "geometry": "flowChartConnector",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 6.0
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "11",
+            "name": "流程图: 接点 10"
+          },
+          "rect": {
+            "x": 101.428,
+            "y": 336.207,
+            "w": 25.855,
+            "h": 25.989
+          },
+          "text": "",
+          "geometry": "flowChartConnector",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 6.0
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "12",
+            "name": "流程图: 接点 11"
+          },
+          "rect": {
+            "x": 100.074,
+            "y": 490.441,
+            "w": 25.855,
+            "h": 25.989
+          },
+          "text": "",
+          "geometry": "flowChartConnector",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 6.0
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "14",
+            "name": "文本框 13"
+          },
+          "rect": {
+            "x": 163.156,
+            "y": 480.225,
+            "w": 798.286,
+            "h": 38.775
+          },
+          "text": "立项会意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "16",
+            "name": "文本框 15"
+          },
+          "rect": {
+            "x": 166.136,
+            "y": 207.194,
+            "w": 798.286,
+            "h": 38.775
+          },
+          "text": "经济评价",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "18",
+            "name": "文本框 17"
+          },
+          "rect": {
+            "x": 160.999,
+            "y": 311.902,
+            "w": 798.286,
+            "h": 38.775
+          },
+          "text": "企业资信",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "20",
+            "name": "文本框 19"
+          },
+          "rect": {
+            "x": 168.151,
+            "y": 72.788,
+            "w": 798.286,
+            "h": 38.775
+          },
+          "text": "工程技术及项目进度",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#BF9000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "22",
+            "name": "文本框 21"
+          },
+          "rect": {
+            "x": 209.944,
+            "y": 98.994,
+            "w": 432.887,
+            "h": 91.801
+          },
+          "text": "成本估算:XX元/瓦\n首年发电量：XX万度",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "24",
+            "name": "文本框 23"
+          },
+          "rect": {
+            "x": 204.298,
+            "y": 252.515,
+            "w": 1044.845,
+            "h": 67.856
+          },
+          "text": "电费收入：项目建成后25年平均发电收益约为XX万元/年；光伏全投资项目收益率为XX%。",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "26",
+            "name": "文本框 25"
+          },
+          "rect": {
+            "x": 205.647,
+            "y": 343.358,
+            "w": 870.056,
+            "h": 126.019
+          },
+          "text": "企业整体资信较好，信用风险较小。\n如：1、企业在09-17年间有9笔被执行记录，金额较小，已结案。\n2、涉诉8起，被告4起，多为劳动纠纷，工程纠纷1起。\n3、20-22年被评为A级纳税人。",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "28",
+            "name": "文本框 27"
+          },
+          "rect": {
+            "x": 204.298,
+            "y": 515.074,
+            "w": 1044.845,
+            "h": 38.775
+          },
+          "text": "1、提高项目收益率……",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "30",
+            "name": "文本框 29"
+          },
+          "rect": {
+            "x": 629.333,
+            "y": 88.47,
+            "w": 640.0,
+            "h": 91.801
+          },
+          "text": "年均发电量:XXX万度\n项目进展补充说明： EMC 合同已签署 ，备案证已获取",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 815.534,
+            "y": 535.922,
+            "w": 264.424,
+            "h": 38.775
+          },
+          "text": "都能抓，企查查找资信",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 19,
+      "id": "slide19",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目评审意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 452.706,
+            "h": 38.775
+          },
+          "text": "项目优势分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "29",
+            "name": "矩形 28"
+          },
+          "rect": {
+            "x": 190.351,
+            "y": 144.609,
+            "w": 953.867,
+            "h": 461.724
+          },
+          "text": "",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "11",
+            "name": "箭头: 右 10"
+          },
+          "rect": {
+            "x": 101.698,
+            "y": 113.667,
+            "w": 486.095,
+            "h": 61.884
+          },
+          "text": "",
+          "geometry": "rightArrow",
+          "style": {
+            "fill": "#E0AB00",
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 118.391,
+            "y": 119.675,
+            "w": 300.0,
+            "h": 48.469
+          },
+          "text": "项目优势分析",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": false,
+              "color": null,
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "24",
+            "name": "文本框 23"
+          },
+          "rect": {
+            "x": 242.914,
+            "y": 183.06,
+            "w": 886.76,
+            "h": 48.179
+          },
+          "text": "企业经营相对稳定……",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 793.165,
+            "y": 96.0,
+            "w": 92.091,
+            "h": 38.775
+          },
+          "text": "自己填",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 20,
+      "id": "slide20",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目评审意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 452.706,
+            "h": 38.775
+          },
+          "text": "项目风险及措施",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": true,
+              "color": null,
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "29",
+            "name": "矩形 28"
+          },
+          "rect": {
+            "x": 190.351,
+            "y": 144.609,
+            "w": 953.867,
+            "h": 461.724
+          },
+          "text": "",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "11",
+            "name": "箭头: 右 10"
+          },
+          "rect": {
+            "x": 101.698,
+            "y": 113.667,
+            "w": 486.095,
+            "h": 61.884
+          },
+          "text": "",
+          "geometry": "rightArrow",
+          "style": {
+            "fill": "#E0AB00",
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 118.391,
+            "y": 119.675,
+            "w": 300.0,
+            "h": 48.469
+          },
+          "text": "项目风险及措施",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": false,
+              "color": null,
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "24",
+            "name": "文本框 23"
+          },
+          "rect": {
+            "x": 242.914,
+            "y": 183.06,
+            "w": 886.76,
+            "h": 126.019
+          },
+          "text": "1、企业现场污染较明显。\n措施：请运维单位加强对项目的清洗。\n\n2、XXXX",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 793.165,
+            "y": 96.0,
+            "w": 92.091,
+            "h": 38.775
+          },
+          "text": "自己填",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 21,
+      "id": "slide21",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目评审意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 452.706,
+            "h": 38.775
+          },
+          "text": "合同风险及措施",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "29",
+            "name": "矩形 28"
+          },
+          "rect": {
+            "x": 190.351,
+            "y": 144.609,
+            "w": 953.867,
+            "h": 461.724
+          },
+          "text": "",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "11",
+            "name": "箭头: 右 10"
+          },
+          "rect": {
+            "x": 101.698,
+            "y": 113.667,
+            "w": 486.095,
+            "h": 61.884
+          },
+          "text": "",
+          "geometry": "rightArrow",
+          "style": {
+            "fill": "#E0AB00",
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 118.391,
+            "y": 119.675,
+            "w": 300.0,
+            "h": 48.469
+          },
+          "text": "合同风险及措施",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": false,
+              "color": null,
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "24",
+            "name": "文本框 23"
+          },
+          "rect": {
+            "x": 242.914,
+            "y": 183.06,
+            "w": 886.76,
+            "h": 96.938
+          },
+          "text": "XX\nXX\nXX",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 793.165,
+            "y": 96.0,
+            "w": 92.091,
+            "h": 38.775
+          },
+          "text": "自己填",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 22,
+      "id": "slide22",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "项目评审意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 452.706,
+            "h": 38.775
+          },
+          "text": "部门评审意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "8",
+            "name": "矩形 7"
+          },
+          "rect": {
+            "x": 195.932,
+            "y": 141.008,
+            "w": 953.867,
+            "h": 436.108
+          },
+          "text": "",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "9",
+            "name": "箭头: 右 8"
+          },
+          "rect": {
+            "x": 107.28,
+            "y": 109.008,
+            "w": 486.095,
+            "h": 64.0
+          },
+          "text": "",
+          "geometry": "rightArrow",
+          "style": {
+            "fill": "#E0AB00",
+            "line": {
+              "color": null,
+              "width": 1
+            },
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "10",
+            "name": "文本框 9"
+          },
+          "rect": {
+            "x": 107.28,
+            "y": 116.774,
+            "w": 300.0,
+            "h": 48.469
+          },
+          "text": "部门评审意见",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 32.0,
+              "bold": false,
+              "color": null,
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "11",
+            "name": "文本框 10"
+          },
+          "rect": {
+            "x": 248.495,
+            "y": 184.913,
+            "w": 901.304,
+            "h": 48.179
+          },
+          "text": "XXXX，综上建议/谨慎推进。",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 24.0,
+              "bold": false,
+              "color": "#000000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 793.165,
+            "y": 96.0,
+            "w": 92.091,
+            "h": 38.775
+          },
+          "text": "自己填",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 23,
+      "id": "slide23",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -3.667,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "目录",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "Rectangle 7"
+          },
+          "rect": {
+            "x": 515.84,
+            "y": 281.767,
+            "w": 398.067,
+            "h": 95.733
+          },
+          "text": "附    录",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 37.333,
+              "bold": true,
+              "color": null,
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "3",
+            "name": "椭圆 2"
+          },
+          "rect": {
+            "x": 486.106,
+            "y": 327.433,
+            "w": 12.2,
+            "h": 12.2
+          },
+          "text": "",
+          "geometry": "ellipse",
+          "style": {
+            "fill": "#E50012",
+            "line": null,
+            "text": null
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 24,
+      "id": "slide24",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "文本框 7"
+          },
+          "rect": {
+            "x": 117.93,
+            "y": -2.093,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "附录",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 535.945,
+            "h": 38.775
+          },
+          "text": "项目基本概况-项目打分自评表",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 25,
+      "id": "slide25",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "shape",
+          "name": {
+            "id": "7",
+            "name": "Rectangle 3"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": 44.532,
+            "w": 1112.362,
+            "h": 634.275
+          },
+          "text": "",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": null
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "10",
+            "name": "文本框 9"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 0.0,
+            "w": 692.706,
+            "h": 38.775
+          },
+          "text": "发电量及收益预测",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "11",
+            "name": "文本框 10"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -6.333,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "附录",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 26,
+      "id": "slide26",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -3.667,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "附录",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 2.667,
+            "w": 336.706,
+            "h": 67.733
+          },
+          "text": "用电企业情况-工商信息",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "4",
+            "name": "图片 3"
+          },
+          "rect": {
+            "x": 61.113,
+            "y": 118.133,
+            "w": 674.533,
+            "h": 456.4
+          },
+          "src": "media/image10.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "3",
+            "name": "矩形 2"
+          },
+          "rect": {
+            "x": 266.63,
+            "y": 326.695,
+            "w": 235.2,
+            "h": 38.667
+          },
+          "text": "（营业执照扫描件）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "2",
+            "name": "文本框 1"
+          },
+          "rect": {
+            "x": 751.533,
+            "y": 158.333,
+            "w": 510.133,
+            "h": 416.2
+          },
+          "text": "企业名称：   \n法定代表人：   \n成立日期：   XXXX年X月X日\n核准日期：   XXXX年X月X日\n营业期限至：   XXXX年X月X日\n登记状态：\n企业类型：\n注册资本：\n登记机关：\n住      所：",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "l",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "5",
+            "name": "文本框 4"
+          },
+          "rect": {
+            "x": 970.252,
+            "y": 131.417,
+            "w": 164.794,
+            "h": 38.775
+          },
+          "text": "会有的可以抓",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 27,
+      "id": "slide27",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 3.404,
+            "y": 0.0,
+            "w": 1276.596,
+            "h": 720.0
+          },
+          "src": "media/image2.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "文本框 8"
+          },
+          "rect": {
+            "x": 124.667,
+            "y": -3.667,
+            "w": 336.706,
+            "h": 38.667
+          },
+          "text": "附录",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "7",
+            "name": "文本框 6"
+          },
+          "rect": {
+            "x": 567.294,
+            "y": 2.667,
+            "w": 444.706,
+            "h": 38.775
+          },
+          "text": "用电企业情况-股权结构、资信证明",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": true,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "矩形 7"
+          },
+          "rect": {
+            "x": 98.734,
+            "y": 152.258,
+            "w": 467.723,
+            "h": 38.775
+          },
+          "text": "（企业被执行情况-中国执行信息公开网）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "10",
+            "name": "矩形 9"
+          },
+          "rect": {
+            "x": 678.655,
+            "y": 155.916,
+            "w": 516.192,
+            "h": 38.775
+          },
+          "text": "（企业信用公示-国家企业信用信息公示系统）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "3",
+            "name": "图片 2",
+            "descr": "图形用户界面, 应用程序, 电子邮件, 网站\n\nAI 生成的内容可能不正确。"
+          },
+          "rect": {
+            "x": 47.192,
+            "y": 194.691,
+            "w": 592.808,
+            "h": 304.837
+          },
+          "src": "media/image11.jpg"
+        },
+        {
+          "type": "image",
+          "name": {
+            "id": "6",
+            "name": "图片 5",
+            "descr": "图形用户界面, 文本, 应用程序\n\nAI 生成的内容可能不正确。"
+          },
+          "rect": {
+            "x": 608.547,
+            "y": 191.033,
+            "w": 664.957,
+            "h": 329.326
+          },
+          "src": "media/image12.jpg"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "4",
+            "name": "文本框 3"
+          },
+          "rect": {
+            "x": 750.291,
+            "y": 113.709,
+            "w": 92.091,
+            "h": 38.775
+          },
+          "text": "可以抓",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "slideNo": 28,
+      "id": "slide28",
+      "elements": [
+        {
+          "type": "image",
+          "name": {
+            "id": "7",
+            "name": "图片 6"
+          },
+          "rect": {
+            "x": 0.053,
+            "y": 0.03,
+            "w": 1279.894,
+            "h": 719.94
+          },
+          "src": "media/image3.png"
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "8",
+            "name": "灯片编号占位符 1"
+          },
+          "rect": {
+            "x": 992.0,
+            "y": 681.667,
+            "w": 288.0,
+            "h": 38.333
+          },
+          "text": "‹#›",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": null,
+              "align": "left",
+              "verticalAlign": "ctr",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "9",
+            "name": "矩形 8"
+          },
+          "rect": {
+            "x": 495.323,
+            "y": 558.738,
+            "w": 625.292,
+            "h": 38.775
+          },
+          "text": "（使用本模板时，所有斜体红字仅为提示，均予以删除）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        },
+        {
+          "type": "text",
+          "name": {
+            "id": "6",
+            "name": "矩形 5"
+          },
+          "rect": {
+            "x": 495.323,
+            "y": 558.738,
+            "w": 625.292,
+            "h": 38.775
+          },
+          "text": "（使用本模板时，所有斜体红字仅为提示，均予以删除）",
+          "geometry": "rect",
+          "style": {
+            "fill": null,
+            "line": null,
+            "text": {
+              "fontSize": 16,
+              "bold": false,
+              "color": "#FF0000",
+              "align": "left",
+              "verticalAlign": "top",
+              "insets": {
+                "left": 9.6,
+                "right": 9.6,
+                "top": 4.8,
+                "bottom": 4.8
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

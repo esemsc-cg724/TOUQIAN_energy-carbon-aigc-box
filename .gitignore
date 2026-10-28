@@ -1,0 +1,16 @@
+**/node_modules/
+frontend/dist/
+**/*.tsbuildinfo
+**/.DS_Store
+**/.env
+**/.env.*
+!**/.env*.example
+**/*.local
+**/*.log
+**/*.pem
+**/*.key
+**/test-results/
+**/playwright-report/
+**/ppt-report/qcc-samples/
+
+**/node_modules
