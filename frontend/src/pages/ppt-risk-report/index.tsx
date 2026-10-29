@@ -3,8 +3,7 @@
 import { useEffect, useState } from 'react';
 
 import { FileParserDesignGallery } from '@/widgets/file-parser-design-gallery';
-
-import { fetchWithSession, getAccessToken, LogoutMenu } from '@/features/auth';
+import { fetchWithSession, getAccessToken } from '@/features/auth';
 
 import { getGraphQLEndpoint, getPptDocumentParseEndpoint } from '@/shared/env';
 
@@ -12,6 +11,7 @@ import {
   type PptReportEmbedContext,
   readPptReportEmbedContext,
 } from './infrastructure/embed-context';
+import { ReportHome } from './report-home';
 
 declare global {
   interface Window {
@@ -113,7 +113,7 @@ function ensurePptReportScript() {
 
   const script = document.createElement('script');
   script.id = scriptId;
-  script.src = '/ppt-report/document-generation-prototypes.js?v=20261026-8';
+  script.src = '/ppt-report/document-generation-prototypes.js?v=20261029-home-2';
   script.defer = true;
   document.body.appendChild(script);
 }
@@ -168,11 +168,22 @@ function usePptReportLegacyRuntime({ bodyClassName, embedMode }: PptReportRuntim
  * - 后端调用改为 AIGC backend GraphQL
  */
 export function PptRiskReportPage({ embedMode = false }: PptRiskReportPageProps) {
-  const [projectSummary, setProjectSummary] = useState({ projectName: '请选择项目', city: '', roofArea: '', capacity: '' });
+  const [projectSummary, setProjectSummary] = useState({
+    projectName: '请选择项目',
+    city: '',
+    roofArea: '',
+    capacity: '',
+  });
   useEffect(() => {
     const sync = () => {
       const context = window.__PPT_REPORT_FILE_WORKSPACE?.context();
-      if (context) setProjectSummary({projectName: context.projectName, city: context.city ?? '', roofArea: context.roofArea ?? '', capacity: context.capacity ?? ''});
+      if (context)
+        setProjectSummary({
+          projectName: context.projectName,
+          city: context.city ?? '',
+          roofArea: context.roofArea ?? '',
+          capacity: context.capacity ?? '',
+        });
     };
     sync();
     window.addEventListener('ppt-report:document-context', sync);
@@ -206,9 +217,17 @@ export function PptRiskReportPage({ embedMode = false }: PptRiskReportPageProps)
               <dt>城市</dt>
               <dd>{projectSummary.city || '待填写'}</dd>
               <dt>屋顶面积</dt>
-              <dd>{projectSummary.roofArea && projectSummary.roofArea !== '待填写' ? `${projectSummary.roofArea} 平方米` : '待填写'}</dd>
+              <dd>
+                {projectSummary.roofArea && projectSummary.roofArea !== '待填写'
+                  ? `${projectSummary.roofArea} 平方米`
+                  : '待填写'}
+              </dd>
               <dt>装机容量</dt>
-              <dd>{projectSummary.capacity && projectSummary.capacity !== '待填写' ? `${projectSummary.capacity} MW` : '待填写'}</dd>
+              <dd>
+                {projectSummary.capacity && projectSummary.capacity !== '待填写'
+                  ? `${projectSummary.capacity} MW`
+                  : '待填写'}
+              </dd>
             </dl>
           </section>
           <section className="side-card">
@@ -259,46 +278,9 @@ export function PptRiskReportEmbedPage() {
 export function PptRiskReportChatbotEmbedPage() {
   usePptReportLegacyRuntime({
     bodyClassName:
-      'platform-prototype scheme-three-desktop ppt-report-embed ppt-report-chatbot-embed',
+      'platform-prototype scheme-three-desktop ppt-report-embed ppt-report-chatbot-embed ppt-report-home',
     embedMode: true,
   });
 
-  return (
-    <main className="scheme3-page ppt-chatbot-page">
-      <div className="ppt-chatbot-auth-menu">
-        <LogoutMenu />
-      </div>
-      <section className="scheme3-shell ppt-chatbot-shell">
-        <section className="scheme3-workspace ppt-chatbot-workspace">
-          <div className="feature-title">
-            <span>智能体调用</span>
-            <h2>PPT 风控报告生成</h2>
-          </div>
-          <div className="draft-stack">
-            <section className="phase-card">
-              <h3 className="block-title">输入模板</h3>
-              <div data-input-template />
-            </section>
-            <section className="phase-card is-hidden" data-after-draft data-ai-draft-preview />
-            <div className="is-hidden" data-after-draft>
-              <FileParserDesignGallery />
-            </div>
-            <div className="actions is-hidden" data-after-draft>
-              <button
-                className="primary"
-                data-final-generate="#schemeThreeOutput"
-                data-source="外部智能体问答系统"
-              >
-                生成最终<span data-doc-label>PPT 风控报告</span>
-              </button>
-            </div>
-            <section className="phase-card ppt-chatbot-output-card">
-              <h3 className="block-title">生成结果</h3>
-              <div id="schemeThreeOutput" className="output-list" />
-            </section>
-          </div>
-        </section>
-      </section>
-    </main>
-  );
+  return <ReportHome />;
 }

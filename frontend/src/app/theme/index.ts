@@ -16,8 +16,12 @@ export function createAppThemeConfig({ fontSize, isDark }: AppThemeConfigInput):
       key: APP_THEME_CSS_VAR_KEY,
     },
     token: {
+      colorPrimary: isDark ? '#a6b6cf' : '#263b5b',
+      colorLink: isDark ? '#a6b6cf' : '#263b5b',
+      colorBgLayout: isDark ? '#11151c' : '#f5f6f8',
+      colorBgContainer: isDark ? '#1a202b' : '#ffffff',
       borderRadius: 8,
-      borderRadiusLG: 10,
+      borderRadiusLG: 12,
       borderRadiusSM: 4,
       fontSize,
     },
