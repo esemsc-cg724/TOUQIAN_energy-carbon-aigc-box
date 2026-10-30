@@ -1661,6 +1661,13 @@ function applyProjectSelection(projectId, options = {}) {
   Object.assign(demoState, project, { projectName: project.name });
 
   if (options.resetReview || previousProjectCode !== String(demoState.projectCode || "")) {
+    qsa('[data-final-generate]').forEach(button => {
+      const target = qs(button.dataset.finalGenerate);
+      if (target) {
+        pptOutputRequests.delete(target);
+        target.replaceChildren();
+      }
+    });
     resetPriorGridLookup();
     resetProjectAssetPreview();
     clearTrustedAiInputSources();
@@ -1996,6 +2003,8 @@ function isCurrentOaProjectAlreadyLoaded() {
   );
 }
 
+let oaProjectRequestSeq = 0;
+
 async function ensureCurrentOaPptProjectLoaded(options = {}) {
   // TRACE[PPT-FE-OA-011]: “进入”按钮兜底同步。
   // 如果用户没有切换下拉框，也要在进入 AI 草稿前按当前 projectCode 拉一次后端标准字段。
@@ -2003,6 +2012,8 @@ async function ensureCurrentOaPptProjectLoaded(options = {}) {
 
   const projectCode = String(demoState.projectCode || "").trim();
   if (!projectCode) return;
+  const requestSeq = ++oaProjectRequestSeq;
+  const active = () => requestSeq === oaProjectRequestSeq && String(demoState.projectCode || '').trim() === projectCode;
 
   demoState.oaProjectLoadStatus = "loading";
   demoState.oaProjectLoadedProjectCode = "";
@@ -2012,8 +2023,10 @@ async function ensureCurrentOaPptProjectLoaded(options = {}) {
 
   try {
     const result = await requestOaPptProject(projectCode);
+    if (!active()) return;
     applyOaPptProjectPayload(result);
   } catch (error) {
+    if (!active()) return;
     resetOaPptSyncedFields();
     demoState.oaProjectLoadStatus = "error";
     demoState.oaProjectLoadedProjectCode = "";
@@ -2053,35 +2066,52 @@ function updateDocMode(mode) {
 function renderInputTemplate(root = document) {
   const targets = root.matches?.("[data-input-template]") ? [root] : qsa("[data-input-template]", root);
   targets.forEach((target) => {
-    target.innerHTML = `
-      <div class="project-select-card">
-        <span class="project-select-title">搜索已有项目</span>
-        <input
-          class="project-search-input"
-          type="search"
-          data-project-search
-          aria-label="搜索已有项目"
-          aria-expanded="${Boolean(demoState.projectSearchResultsVisible)}"
-          placeholder="点击选择，或输入项目名称、项目编号或城市"
-          value="${escapeHtml(demoState.projectSearchKeyword || "")}"
-        />
-        <div data-project-search-results-slot>${renderProjectSearchResults()}</div>
-        ${renderOaProjectListNotice()}
-      </div>
-      ${renderOaProjectLoadNotice()}
+    const isReportHome = Boolean(target.closest('[data-report-home]'));
+    const hasProject = Boolean(demoState.projectCode);
+    const projectReady = hasProject && demoState.oaProjectLoadedProjectCode === demoState.projectCode && demoState.oaProjectLoadStatus !== 'loading' && demoState.oaProjectLoadStatus !== 'error';
+    const projectFields = `
       <div class="form-grid project-autofill-grid">
         <label>项目编号<input data-field="projectCode" value="${escapeHtml(demoState.projectCode)}" readonly /></label>
         <label>项目地址<input data-field="address" value="${escapeHtml(demoState.address)}" readonly /></label>
         <label>屋顶面积（平方米）<input data-field="roofArea" value="${escapeHtml(demoState.roofArea)}" readonly /></label>
         <label>装机容量（MW）<input data-field="capacity" value="${escapeHtml(demoState.capacity || "-")}" readonly /></label>
+      </div>`;
+    target.innerHTML = `
+      <div class="project-select-card">
+        <label class="project-select-title" for="${isReportHome ? 'report-home-project-search' : 'report-project-search'}">搜索已有项目</label>
+        ${isReportHome ? `<div class="studio-search-wrap"><span class="studio-search-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></span>` : ''}
+        <input
+          id="${isReportHome ? 'report-home-project-search' : 'report-project-search'}"
+          class="project-search-input"
+          type="search"
+          data-project-search
+          aria-label="搜索已有项目"
+          aria-expanded="${Boolean(demoState.projectSearchResultsVisible)}"
+          placeholder="${isReportHome ? '搜索项目名称、编号或所在城市' : '点击选择，或输入项目名称、项目编号或城市'}"
+          value="${escapeHtml(demoState.projectSearchKeyword || "")}"
+        />
+        ${isReportHome ? '</div>' : ''}
+        <div data-project-search-results-slot>${renderProjectSearchResults()}</div>
+        ${renderOaProjectListNotice()}
       </div>
+      ${renderOaProjectLoadNotice()}
+      ${isReportHome ? `
+        <div class="studio-project-summary ${hasProject ? '' : 'is-empty'}">
+          ${hasProject ? '<div class="studio-summary-label">项目概况</div>' : `<div class="studio-summary-empty"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg><strong>未选择项目</strong><span>选择项目后显示基础信息。</span></div>`}
+          ${projectFields}
+        </div>
+        ${demoState.oaProjectLoadStatus === 'error' ? `<div class="studio-project-error" role="alert"><span>${escapeHtml(demoState.oaProjectLoadMessage || '项目信息读取失败，请重试。')}</span><button type="button" data-project-retry>重试读取</button></div>` : ''}
+      ` : projectFields}
       <div class="actions">
-        <button class="primary" data-ai-draft>进入</button>
-        <button type="button" data-enterprise-query ${enterpriseLoadStatus === "loading" ? "disabled" : ""}>查询企业信息</button>
+        <button class="primary" data-ai-draft ${isReportHome && !projectReady ? 'disabled' : ''}>${isReportHome ? '进入报告工作区 <span aria-hidden="true">→</span>' : '进入'}</button>
+        <button type="button" data-enterprise-query ${enterpriseLoadStatus === "loading" || (isReportHome && !projectReady) ? "disabled" : ""}>查询企业信息${isReportHome ? ' ↗' : ''}</button>
       </div>
       <div role="status" data-enterprise-query-status>${escapeHtml(enterpriseLoadMessage)}</div>
     `;
     qs("[data-enterprise-query]", target)?.addEventListener("click", () => void loadEnterpriseInformation());
+    qs('[data-project-retry]', target)?.addEventListener('click', () => {
+      void handleProjectSelectionChange(demoState.projectId);
+    });
   });
   window.dispatchEvent(new CustomEvent("ppt-report:document-context"));
   qsa('[data-final-generate]').forEach(button => {
@@ -5426,12 +5456,19 @@ function showInlineThinking(button, title, steps, done) {
   }, THINKING_DELAY_MS);
 }
 
+const pptOutputRequests = new WeakMap();
+
 function showTargetThinking(target, title, steps, done) {
+  const request = { projectCode: String(demoState.projectCode || '') };
+  pptOutputRequests.set(target, request);
+  const active = () => target.isConnected && pptOutputRequests.get(target) === request && String(demoState.projectCode || '') === request.projectCode;
   target.innerHTML = thinkingMarkup(title, steps);
   setTimeout(async () => {
+    if (!active()) return;
     try {
-      await done();
+      await done(active);
     } catch (error) {
+      if (!active()) return;
       target.innerHTML = `
         <div class="output-item">
           <div>
@@ -5440,6 +5477,7 @@ function showTargetThinking(target, title, steps, done) {
           </div>
         </div>
       `;
+      postEmbedMessage('PPT_REPORT_ERROR', { message: error.message || String(error) });
     }
   }, THINKING_DELAY_MS);
 }
@@ -5618,19 +5656,23 @@ function setupGenerateButtons(root = document) {
       readForm(button.closest("main") || document);
       const target = qs(button.dataset.finalGenerate);
       if (!target) return;
-      showTargetThinking(target, "智能体思维流", ["同步本项目 OA 字段", "生成本项目 鑫浦大模型总结", "写入风控报告模板"], async () => {
+      showTargetThinking(target, "智能体思维流", ["同步本项目 OA 字段", "生成本项目 鑫浦大模型总结", "写入风控报告模板"], async (active) => {
         await ensureCurrentOaPptProjectLoaded({ refresh: false });
+        if (!active()) return;
         // Analyze the exact current preview; do not regenerate or confirm page fields.
         if (demoState.oaProjectLoadSource?.provider === 'oa-pg+pm-mysql-live') {
           clearTimeout(businessRiskTimer);
           await refreshBusinessRiskEvaluation();
+          if (!active()) return;
         }
         await generateCurrentPreviewSummary();
+        if (!active()) return;
         refreshProjectTemplates();
         renderDraftPanels();
         qsa("[data-after-draft]").forEach((node) => node.classList.remove("is-hidden"));
 
         return requestPptGeneration().then((generatedFile) => {
+          if (!active()) return;
           renderOutput(target, button.dataset.source || "文档生成流程", generatedFile);
           if (generatedFile?.href) {
             // TRACE[PPT-IFR-005]: PPT 生成成功后，把下载信息回传给外部大模型窗口。
